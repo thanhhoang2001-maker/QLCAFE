@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DTO_QLCAFE
 {
-    public class Class1
+    class DTO_LOAISANPHAM
     {
     }
 }
