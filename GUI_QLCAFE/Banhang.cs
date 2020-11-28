@@ -21,5 +21,26 @@ namespace GUI_QLCAFE
         {
 
         }
+
+        private void btSoluongTru_Click(object sender, EventArgs e)
+        {
+            int sl = int.Parse(txtSoLuong.Text);
+            sl--;
+            if (sl < 0)
+            {
+                MessageBox.Show("Khong the nho hon!");
+            }
+            else
+            {
+                txtSoLuong.Text = sl.ToString();
+            }
+        }
+
+        private void btSoluongThem_Click(object sender, EventArgs e)
+        {
+            int sl = int.Parse(txtSoLuong.Text);
+            sl++;
+            txtSoLuong.Text = sl.ToString();
+        }
     }
 }
