@@ -29,23 +29,23 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.lqQuenmk = new System.Windows.Forms.Label();
+            this.txtMatkhau = new System.Windows.Forms.TextBox();
+            this.txtEmail = new System.Windows.Forms.TextBox();
+            this.lbQuenmk = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.btThoatDN = new System.Windows.Forms.Button();
             this.btDangnhap = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.panel1.Controls.Add(this.textBox2);
-            this.panel1.Controls.Add(this.textBox1);
-            this.panel1.Controls.Add(this.lqQuenmk);
+            this.panel1.Controls.Add(this.txtMatkhau);
+            this.panel1.Controls.Add(this.txtEmail);
+            this.panel1.Controls.Add(this.lbQuenmk);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.btThoatDN);
@@ -56,17 +56,33 @@
             this.panel1.Size = new System.Drawing.Size(312, 317);
             this.panel1.TabIndex = 0;
             // 
-            // lqQuenmk
+            // txtMatkhau
             // 
-            this.lqQuenmk.AutoSize = true;
-            this.lqQuenmk.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lqQuenmk.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lqQuenmk.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lqQuenmk.Location = new System.Drawing.Point(184, 184);
-            this.lqQuenmk.Name = "lqQuenmk";
-            this.lqQuenmk.Size = new System.Drawing.Size(94, 13);
-            this.lqQuenmk.TabIndex = 6;
-            this.lqQuenmk.Text = "Quên mật khẩu ?";
+            this.txtMatkhau.Location = new System.Drawing.Point(34, 145);
+            this.txtMatkhau.Multiline = true;
+            this.txtMatkhau.Name = "txtMatkhau";
+            this.txtMatkhau.Size = new System.Drawing.Size(244, 26);
+            this.txtMatkhau.TabIndex = 8;
+            // 
+            // txtEmail
+            // 
+            this.txtEmail.Location = new System.Drawing.Point(34, 94);
+            this.txtEmail.Multiline = true;
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(244, 26);
+            this.txtEmail.TabIndex = 7;
+            // 
+            // lbQuenmk
+            // 
+            this.lbQuenmk.AutoSize = true;
+            this.lbQuenmk.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lbQuenmk.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbQuenmk.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lbQuenmk.Location = new System.Drawing.Point(184, 184);
+            this.lbQuenmk.Name = "lbQuenmk";
+            this.lbQuenmk.Size = new System.Drawing.Size(94, 13);
+            this.lbQuenmk.TabIndex = 6;
+            this.lbQuenmk.Text = "Quên mật khẩu ?";
             // 
             // label2
             // 
@@ -112,6 +128,7 @@
             this.btDangnhap.TabIndex = 2;
             this.btDangnhap.Text = "ĐĂNG NHẬP";
             this.btDangnhap.UseVisualStyleBackColor = false;
+            this.btDangnhap.Click += new System.EventHandler(this.btDangnhap_Click);
             // 
             // label3
             // 
@@ -124,22 +141,6 @@
             this.label3.Size = new System.Drawing.Size(312, 37);
             this.label3.TabIndex = 7;
             this.label3.Text = "COFFEE MANAGEMENT";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(34, 94);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(244, 26);
-            this.textBox1.TabIndex = 7;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(34, 145);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(244, 26);
-            this.textBox2.TabIndex = 8;
             // 
             // FormDangnhap
             // 
@@ -166,10 +167,10 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btThoatDN;
         private System.Windows.Forms.Button btDangnhap;
-        private System.Windows.Forms.Label lqQuenmk;
+        private System.Windows.Forms.Label lbQuenmk;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtMatkhau;
+        private System.Windows.Forms.TextBox txtEmail;
     }
 }
 

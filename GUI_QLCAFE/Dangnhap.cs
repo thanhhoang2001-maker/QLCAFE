@@ -16,5 +16,19 @@ namespace GUI_QLCAFE
         {
             InitializeComponent();
         }
+        BUS_NHANVIEN busNhanvien = new BUS_NHANVIEN();
+
+        public string vaitro { get; set; }
+
+        private void btDangnhap_Click(object sender, EventArgs e)
+        {
+            DTO_NHANVIEN nv = new DTO_NHANVIEN;
+            nv.EMAIL = txtEmail.Text;
+            nv.MATKHAU = txtMatkhau.Text;
+            if (busNhanvien.NhanVienDangNhap(nv))
+            {
+
+            }
+        }
     }
 }
