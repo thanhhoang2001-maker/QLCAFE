@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DTO_QLCAFE
 {
-    class DTO_SANPHAM
+    public class DTO_SANPHAM
     {
         private int masp;
         private string maloai;
