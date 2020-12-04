@@ -16,5 +16,11 @@ namespace GUI_QLCAFE
         {
             InitializeComponent();
         }
+
+        private void btDangnhap_Click(object sender, EventArgs e)
+        {
+            Form dn = new Main();
+            dn.Show();
+        }
     }
 }

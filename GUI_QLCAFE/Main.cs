@@ -21,5 +21,22 @@ namespace GUI_QLCAFE
         {
 
         }
+
+        private void btNhanvien_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btBanhang_Click(object sender, EventArgs e)
+        {
+            Form formBanHang = new Banhang();
+            formBanHang.Show();
+        }
+
+        private void btSanpham_Click(object sender, EventArgs e)
+        {
+            Sanpham frmSanPham = new Sanpham();
+            frmSanPham.Show();
+        }
     }
 }

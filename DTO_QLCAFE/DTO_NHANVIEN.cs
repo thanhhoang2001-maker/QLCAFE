@@ -94,7 +94,7 @@ namespace DTO_QLCAFE
             }
         }
 
-        public DTO_NHANVIEN(string MaNhanVien, string TenNhanVien, string DiaChi, int SoDienThoai, int ChucVu, string Email, string MatKhau)
+        public DTO_NHANVIEN(int MaNhanVien, string TenNhanVien, string DiaChi, int SoDienThoai, int ChucVu, string Email, string MatKhau)
         {
             this.manv = MaNhanVien;
             this.tennv = TenNhanVien;
