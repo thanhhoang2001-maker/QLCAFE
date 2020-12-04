@@ -48,8 +48,11 @@
             this.btTimNV = new System.Windows.Forms.Button();
             this.txtTimNV = new System.Windows.Forms.TextBox();
             this.dgvNV = new System.Windows.Forms.DataGridView();
+<<<<<<< Updated upstream
             this.label6 = new System.Windows.Forms.Label();
             this.txtEmailNV = new System.Windows.Forms.TextBox();
+=======
+>>>>>>> Stashed changes
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvNV)).BeginInit();
@@ -92,7 +95,11 @@
             // 
             this.rbRoleQL.AutoSize = true;
             this.rbRoleQL.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+<<<<<<< Updated upstream
             this.rbRoleQL.Location = new System.Drawing.Point(679, 116);
+=======
+            this.rbRoleQL.Location = new System.Drawing.Point(679, 120);
+>>>>>>> Stashed changes
             this.rbRoleQL.Name = "rbRoleQL";
             this.rbRoleQL.Size = new System.Drawing.Size(81, 21);
             this.rbRoleQL.TabIndex = 12;
@@ -104,7 +111,11 @@
             // 
             this.rbRoleNV.AutoSize = true;
             this.rbRoleNV.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+<<<<<<< Updated upstream
             this.rbRoleNV.Location = new System.Drawing.Point(553, 116);
+=======
+            this.rbRoleNV.Location = new System.Drawing.Point(553, 120);
+>>>>>>> Stashed changes
             this.rbRoleNV.Name = "rbRoleNV";
             this.rbRoleNV.Size = new System.Drawing.Size(98, 21);
             this.rbRoleNV.TabIndex = 11;
@@ -139,7 +150,11 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.SystemColors.ControlText;
+<<<<<<< Updated upstream
             this.label5.Location = new System.Drawing.Point(67, 107);
+=======
+            this.label5.Location = new System.Drawing.Point(67, 120);
+>>>>>>> Stashed changes
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(103, 17);
             this.label5.TabIndex = 8;
@@ -166,7 +181,11 @@
             // 
             // txtSdtNV
             // 
+<<<<<<< Updated upstream
             this.txtSdtNV.Location = new System.Drawing.Point(176, 107);
+=======
+            this.txtSdtNV.Location = new System.Drawing.Point(176, 119);
+>>>>>>> Stashed changes
             this.txtSdtNV.Multiline = true;
             this.txtSdtNV.Name = "txtSdtNV";
             this.txtSdtNV.Size = new System.Drawing.Size(213, 30);
@@ -191,7 +210,11 @@
             this.panel2.Controls.Add(this.btThemNV);
             this.panel2.Controls.Add(this.btTimNV);
             this.panel2.Controls.Add(this.txtTimNV);
+<<<<<<< Updated upstream
             this.panel2.Location = new System.Drawing.Point(579, 225);
+=======
+            this.panel2.Location = new System.Drawing.Point(579, 192);
+>>>>>>> Stashed changes
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(315, 304);
             this.panel2.TabIndex = 1;
@@ -272,6 +295,7 @@
             this.btTimNV.UseVisualStyleBackColor = false;
             // 
             // txtTimNV
+<<<<<<< Updated upstream
             // 
             this.txtTimNV.Location = new System.Drawing.Point(13, 20);
             this.txtTimNV.Multiline = true;
@@ -305,6 +329,22 @@
             this.txtEmailNV.Name = "txtEmailNV";
             this.txtEmailNV.Size = new System.Drawing.Size(213, 30);
             this.txtEmailNV.TabIndex = 15;
+=======
+            // 
+            this.txtTimNV.Location = new System.Drawing.Point(13, 20);
+            this.txtTimNV.Multiline = true;
+            this.txtTimNV.Name = "txtTimNV";
+            this.txtTimNV.Size = new System.Drawing.Size(202, 34);
+            this.txtTimNV.TabIndex = 0;
+            // 
+            // dgvNV
+            // 
+            this.dgvNV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvNV.Location = new System.Drawing.Point(13, 192);
+            this.dgvNV.Name = "dgvNV";
+            this.dgvNV.Size = new System.Drawing.Size(560, 304);
+            this.dgvNV.TabIndex = 2;
+>>>>>>> Stashed changes
             // 
             // Nhanvien
             // 
@@ -316,6 +356,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "Nhanvien";
             this.Text = "Nhanvien";
+            this.Load += new System.EventHandler(this.Nhanvien_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
