@@ -93,7 +93,6 @@
             this.label7.Size = new System.Drawing.Size(80, 17);
             this.label7.TabIndex = 14;
             this.label7.Text = "ĐĂNG XUẤT";
-            this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
             // label6
             // 
@@ -164,6 +163,7 @@
             this.btThoatMain.Size = new System.Drawing.Size(139, 61);
             this.btThoatMain.TabIndex = 7;
             this.btThoatMain.UseVisualStyleBackColor = false;
+            this.btThoatMain.Click += new System.EventHandler(this.btThoatMain_Click);
             // 
             // btDangxuat
             // 
@@ -174,6 +174,7 @@
             this.btDangxuat.Size = new System.Drawing.Size(139, 61);
             this.btDangxuat.TabIndex = 6;
             this.btDangxuat.UseVisualStyleBackColor = false;
+            this.btDangxuat.Click += new System.EventHandler(this.btDangxuat_Click);
             // 
             // btDoimatkhau
             // 
@@ -184,6 +185,7 @@
             this.btDoimatkhau.Size = new System.Drawing.Size(139, 61);
             this.btDoimatkhau.TabIndex = 5;
             this.btDoimatkhau.UseVisualStyleBackColor = false;
+            this.btDoimatkhau.Click += new System.EventHandler(this.btDoimatkhau_Click);
             // 
             // btThongke
             // 
@@ -194,6 +196,7 @@
             this.btThongke.Size = new System.Drawing.Size(139, 61);
             this.btThongke.TabIndex = 4;
             this.btThongke.UseVisualStyleBackColor = false;
+            this.btThongke.Click += new System.EventHandler(this.btThongke_Click);
             // 
             // btBanhang
             // 
@@ -204,6 +207,7 @@
             this.btBanhang.Size = new System.Drawing.Size(139, 61);
             this.btBanhang.TabIndex = 3;
             this.btBanhang.UseVisualStyleBackColor = false;
+            this.btBanhang.Click += new System.EventHandler(this.btBanhang_Click);
             // 
             // btSanpham
             // 
@@ -214,6 +218,7 @@
             this.btSanpham.Size = new System.Drawing.Size(139, 61);
             this.btSanpham.TabIndex = 2;
             this.btSanpham.UseVisualStyleBackColor = false;
+            this.btSanpham.Click += new System.EventHandler(this.btSanpham_Click);
             // 
             // btKhachhang
             // 
@@ -224,6 +229,7 @@
             this.btKhachhang.Size = new System.Drawing.Size(139, 61);
             this.btKhachhang.TabIndex = 1;
             this.btKhachhang.UseVisualStyleBackColor = false;
+            this.btKhachhang.Click += new System.EventHandler(this.btKhachhang_Click);
             // 
             // btNhanvien
             // 
@@ -234,6 +240,7 @@
             this.btNhanvien.Size = new System.Drawing.Size(139, 61);
             this.btNhanvien.TabIndex = 0;
             this.btNhanvien.UseVisualStyleBackColor = false;
+            this.btNhanvien.Click += new System.EventHandler(this.btNhanvien_Click);
             // 
             // label9
             // 

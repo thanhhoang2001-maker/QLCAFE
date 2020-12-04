@@ -1,4 +1,5 @@
 CREATE DATABASE QLQuanCaFe
+--DROP DATABASE QLQuanCaFe
 USE	QLQuanCaFe
 GO
 
@@ -9,7 +10,7 @@ CREATE TABLE NHANVIEN(
 	SoDienThoai VARCHAR(15),
 	ChucVu TINYINT NOT NULL, -- 1 la ADMIN , 0 la NhanVien
 	Email VARCHAR(100) NOT NULL,
-	MatKhau VARCHAR(300) NOT NULL,
+	MatKhau VARCHAR(max) default '13012420314234138112108765216110414524878123',
 	PRIMARY KEY(MaNhanVien)
 );
 CREATE TABLE SANPHAM(
@@ -65,6 +66,7 @@ ALTER TABLE dbo.CHITIETHOADON ADD FOREIGN KEY(MaHoaDon) REFERENCES dbo.HOADON(Ma
 ALTER TABLE dbo.CHITIETHOADON ADD FOREIGN KEY(MaSanPham) REFERENCES dbo.SANPHAM(MaSanPham);
 ALTER TABLE dbo.DANHSACHMONAN ADD FOREIGN KEY(MaLoai) REFERENCES dbo.LOAISANPHAM(MaLoai);
 GO
+
 
  -----------------------------------
 
@@ -296,3 +298,8 @@ BEGIN
 	SELECT MaLoai, MaSanPham, SoLuongCon FROM dbo.SANPHAM
 END
 GO
+exec InsertDataIntoNhanVien @email = 'thanhhoangok2309@gmail.com' ,
+							@tennv = N'Hoang' ,
+							@diachi = N'Quan 12',
+							@chucvu = 1,
+							@sodienthoai = '0939674893'

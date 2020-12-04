@@ -1,6 +1,6 @@
 ﻿namespace GUI_QLCAFE
 {
-    partial class FormDangnhap
+    partial class Dangnhap
     {
         /// <summary>
         /// Required designer variable.
@@ -37,12 +37,14 @@
             this.btThoatDN = new System.Windows.Forms.Button();
             this.btDangnhap = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.txtMatkhau);
             this.panel1.Controls.Add(this.txtEmail);
             this.panel1.Controls.Add(this.lbQuenmk);
@@ -83,6 +85,7 @@
             this.lbQuenmk.Size = new System.Drawing.Size(94, 13);
             this.lbQuenmk.TabIndex = 6;
             this.lbQuenmk.Text = "Quên mật khẩu ?";
+            this.lbQuenmk.Click += new System.EventHandler(this.lbQuenmk_Click);
             // 
             // label2
             // 
@@ -103,6 +106,7 @@
             this.label1.Size = new System.Drawing.Size(99, 37);
             this.label1.TabIndex = 4;
             this.label1.Text = "LOGIN";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // btThoatDN
             // 
@@ -115,6 +119,7 @@
             this.btThoatDN.TabIndex = 3;
             this.btThoatDN.Text = "THOÁT";
             this.btThoatDN.UseVisualStyleBackColor = false;
+            this.btThoatDN.Click += new System.EventHandler(this.btThoatDN_Click);
             // 
             // btDangnhap
             // 
@@ -142,7 +147,17 @@
             this.label3.TabIndex = 7;
             this.label3.Text = "COFFEE MANAGEMENT";
             // 
-            // FormDangnhap
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(220, 268);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 9;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // Dangnhap
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -151,7 +166,7 @@
             this.ClientSize = new System.Drawing.Size(771, 404);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.panel1);
-            this.Name = "FormDangnhap";
+            this.Name = "Dangnhap";
             this.Text = "Form1";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -171,6 +186,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtMatkhau;
         private System.Windows.Forms.TextBox txtEmail;
+        private System.Windows.Forms.Button button1;
     }
 }
 
