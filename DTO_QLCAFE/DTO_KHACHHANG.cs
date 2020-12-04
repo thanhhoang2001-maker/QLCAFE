@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DTO_QLCAFE
 {
-    class DTO_KHACHHANG
+    public class DTO_KHACHHANG
     {
         private string sdtkh;
         private string emailkh;

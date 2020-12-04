@@ -68,14 +68,7 @@ GO
 
  -----------------------------------
 
-CREATE PROC DoanhThu
-AS
-BEGIN
-	SELECT MaHoaDon, ThoiGian, TongGiaTien FROM dbo.HOADON
-END
-GO
-
-CREATE PROCEDURE [dbo].[DangNhap] @email varchar(100),@matKhau nvarchar(300)
+CREATE PROCEDURE [dbo].[DangNhap] @email varchar(100),@matKhau nvarchar(max)
 AS
 BEGIN
       declare @status int
@@ -85,7 +78,7 @@ else
        set @status=0
 select @status
 END
-GO	
+GO
 
 CREATE PROCEDURE QuenMatKhau @email varchar(100)
 AS
@@ -112,7 +105,7 @@ GO
 CREATE PROCEDURE [dbo].[DanhSachNV]
 AS
 BEGIN
-      SELECT Email, TenNhanVien, DiaChi, ChucVu, SoDienThoai FROM dbo.NHANVIEN
+      SELECT TenNhanVien, SoDienThoai, Email,DiaChi, ChucVu FROM dbo.NHANVIEN
 END
 GO
 
@@ -143,15 +136,16 @@ END
 GO
 
 CREATE PROCEDURE [dbo].[InsertDataIntoNhanVien]
-	@email nvarchar(100),
 	@tennv nvarchar(50),
+	@sodienthoai VARCHAR(15),
+	@email nvarchar(100),
 	@diachi nvarchar(100),
-	@chucVu tinyint,
-	@sodienthoai VARCHAR(15)
+	@chucVu tinyint
+	
 AS
 BEGIN
-	INSERT INTO NHANVIEN( Email, TenNhanVien, DiaChi, ChucVu, SoDienThoai) 
-	VALUES (@email, @tennv, @diachi,@chucvu, @sodienthoai) 
+	INSERT INTO NHANVIEN(  TenNhanVien, SoDienThoai,Email, DiaChi, ChucVu) 
+	VALUES ( @tennv,@sodienthoai,@email,@diachi,@chucvu)
 END
 GO
 
@@ -165,14 +159,15 @@ END
 GO
 
 CREATE PROCEDURE [dbo].[UpdateDataIntoTblNhanVien]
-	@email nvarchar(100),
 	@tenNv nvarchar(50),
+	@sodienthoai VARCHAR(15),
+	@email nvarchar(100),
 	@diaChi nvarchar(200),
-	@chucVu TINYINT,
-	@sodienthoai VARCHAR(15)
+	@chucVu TINYINT
+	
 AS
 BEGIN
-	UPDATE dbo.NHANVIEN SET TenNhanVien = @tenNv, DiaChi = @diaChi, ChucVu = @chucVu, SoDienThoai = @sodienthoai
+	UPDATE dbo.NHANVIEN SET TenNhanVien = @tenNv, SoDienThoai = @sodienthoai, DiaChi = @diaChi, ChucVu = @chucVu
 	where Email  =  @email
 END
 GO
@@ -184,5 +179,122 @@ BEGIN
       SET NOCOUNT ON;
       SELECT Email, TenNhanVien, DiaChi, SoDienThoai, ChucVu
       FROM dbo.NHANVIEN where TenNhanVien like '%' + @tenNv + '%'
+END
+GO
+
+----- Procedure DAL_Khách
+
+CREATE PROCEDURE [dbo].[DanhSachKhach]
+AS
+BEGIN
+      SET NOCOUNT ON;
+      SELECT *
+      FROM dbo.KHACHHANG
+END
+GO
+
+CREATE PROCEDURE [dbo].[InsertDataIntoTblKhach]
+@dienThoai varchar(15),@tenKhach nvarchar(100), @email varchar(100), @ngaysinh DATETIME
+AS
+BEGIN
+DECLARE @Manv VARCHAR(20);
+select @Manv = MaNhanVien from dbo.NHANVIEN where Email = @email
+INSERT INTO KHACHHANG (SoDienThoai, TenKhachHang, NgaySinh,MaNhanVien) 
+VALUES ( @dienThoai,@tenKhach, @ngaysinh,@Manv)
+END
+GO
+
+CREATE PROCEDURE [dbo].[DeleteDataFromtblKhach]
+@dienthoai varchar(15)
+AS
+BEGIN
+DELETE FROM dbo.KHACHHANG
+WHERE SoDienThoai = @dienthoai
+END
+GO
+
+CREATE PROCEDURE [dbo].[SearchKhach]
+@dienthoai varchar(15)
+AS
+BEGIN
+      SET NOCOUNT ON;
+      SELECT *
+      FROM dbo.KHACHHANG where SoDienThoai like + '%' + @dienthoai + '%'
+END
+GO
+
+-- PROCEDURE HÀNG HÓA
+CREATE PROCEDURE DanhSachSanPham
+AS
+BEGIN
+      SET NOCOUNT ON;
+      SELECT *
+      FROM dbo.SANPHAM
+END
+GO
+
+CREATE PROCEDURE [dbo].[InsertDataIntoTblSanPham]
+@tenSanPham nvarchar(50),
+@soLuongCon int,
+@giaBan MONEY,
+@hinhAnh nvarchar(400),
+@moTa nvarchar(max),
+@email varchar(20)
+AS
+BEGIN
+DECLARE @Manv VARCHAR(20);
+select @Manv = MaNhanVien from dbo.NHANVIEN where Email = @email
+INSERT INTO SANPHAM (TenSanPham, SoLuongCon, GiaBan, HinhAnh,MoTa, MaNhanVien) 
+VALUES ( @tenSanPham, @soLuongCon, @GiaBan, @hinhAnh, @moTa, @Manv) 
+END
+GO
+
+CREATE PROCEDURE DeleteDataFromtblSanPham
+@maSanPham int
+AS
+BEGIN
+DELETE FROM dbo.SANPHAM
+WHERE MaSanPham = @maSanPham
+END
+GO
+
+CREATE PROCEDURE [dbo].[UpdateDataIntoTblSanPham]
+@maSanPham int,
+@tenSanPham nvarchar(50),
+@soLuong int,
+@giaBan float,
+@hinhAnh nvarchar(400),
+@moTa nvarchar(MAX)
+AS
+BEGIN
+UPDATE dbo.SANPHAM SET TenSanPham = @tenSanPham, SoLuongCon = @soLuong,
+GiaBan = @giaBan, HinhAnh=@hinhAnh,MoTa = @moTa
+where MaSanPham = @maSanPham
+END
+GO
+
+CREATE PROCEDURE [dbo].[SearchSanPham]
+@tenSanPham nvarchar(50)
+AS
+BEGIN
+      SET NOCOUNT ON;
+      SELECT TenSanPham, SoLuongCon, GiaBan,HinhAnh, MoTa
+      FROM dbo.SANPHAM where TenSanPham like '%' + @tenSanPham + '%'
+END
+GO
+
+------ Procedure Thong Ke
+
+CREATE PROC ThongKeDoanhThu
+AS
+BEGIN
+	SELECT MaHoaDon, ThoiGian, TongGiaTien FROM dbo.HOADON
+END
+GO
+
+CREATE PROC ThongKeNguyenLieuConLai
+AS
+BEGIN
+	SELECT MaLoai, MaSanPham, SoLuongCon FROM dbo.SANPHAM
 END
 GO

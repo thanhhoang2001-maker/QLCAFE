@@ -9,6 +9,6 @@ namespace DAL_QLCAFE
 {
     public class DBConnect
     {
-        protected SqlConnection _conn = new SqlConnection(@"Data Source=.;Initial Catalog=QLQuanCaFe;Integrated Security=True");
+        protected SqlConnection _conn = new SqlConnection(@"Data Source=VANDUC\SQLEXPRESS;Initial Catalog=QLQuanCaFe;Integrated Security=True");
     }
 }
