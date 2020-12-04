@@ -76,12 +76,12 @@ namespace GUI_QLCAFE
 
         private void btThoatDN_Click(object sender, EventArgs e)
         {
-            Visible = false;
-            ShowInTaskbar = false;
+            //Visible = false;
+            //ShowInTaskbar = false;
 
-            DoiMK doimatkhau = new DoiMK();
-            doimatkhau.Activate();
-            doimatkhau.Show();
+            //DoiMK doimatkhau = new DoiMK();
+            //doimatkhau.Activate();
+            //doimatkhau.Show();
         }
 
         private void label1_Click(object sender, EventArgs e)

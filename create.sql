@@ -70,7 +70,7 @@ GO
 
  -----------------------------------
 
-CREATE PROCEDURE [dbo].[DangNhap] @email varchar(100),@matKhau nvarchar(300)
+CREATE PROCEDURE [dbo].[DangNhap] @email varchar(100),@matKhau nvarchar(max)
 AS
 BEGIN
       declare @status int
@@ -107,7 +107,7 @@ GO
 CREATE PROCEDURE [dbo].[DanhSachNV]
 AS
 BEGIN
-      SELECT Email, TenNhanVien, DiaChi, ChucVu, SoDienThoai FROM dbo.NHANVIEN
+      SELECT TenNhanVien, SoDienThoai, Email,DiaChi, ChucVu FROM dbo.NHANVIEN
 END
 GO
 
@@ -138,15 +138,16 @@ END
 GO
 
 CREATE PROCEDURE [dbo].[InsertDataIntoNhanVien]
-	@email nvarchar(100),
 	@tennv nvarchar(50),
+	@sodienthoai VARCHAR(15),
+	@email nvarchar(100),
 	@diachi nvarchar(100),
-	@chucVu tinyint,
-	@sodienthoai VARCHAR(15)
+	@chucVu tinyint
+	
 AS
 BEGIN
-	INSERT INTO NHANVIEN( Email, TenNhanVien, DiaChi, ChucVu, SoDienThoai) 
-	VALUES (@email, @tennv, @diachi,@chucvu, @sodienthoai) 
+	INSERT INTO NHANVIEN(  TenNhanVien, SoDienThoai,Email, DiaChi, ChucVu) 
+	VALUES ( @tennv,@sodienthoai,@email,@diachi,@chucvu)
 END
 GO
 
@@ -160,14 +161,15 @@ END
 GO
 
 CREATE PROCEDURE [dbo].[UpdateDataIntoTblNhanVien]
-	@email nvarchar(100),
 	@tenNv nvarchar(50),
+	@sodienthoai VARCHAR(15),
+	@email nvarchar(100),
 	@diaChi nvarchar(200),
-	@chucVu TINYINT,
-	@sodienthoai VARCHAR(15)
+	@chucVu TINYINT
+	
 AS
 BEGIN
-	UPDATE dbo.NHANVIEN SET TenNhanVien = @tenNv, DiaChi = @diaChi, ChucVu = @chucVu, SoDienThoai = @sodienthoai
+	UPDATE dbo.NHANVIEN SET TenNhanVien = @tenNv, SoDienThoai = @sodienthoai, DiaChi = @diaChi, ChucVu = @chucVu
 	where Email  =  @email
 END
 GO

@@ -151,9 +151,9 @@ namespace DAL_QLCAFE
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.CommandText = "[DanhSachNV]";
                 cmd.Connection = _conn;
-                DataTable dtHang = new DataTable();
-                dtHang.Load(cmd.ExecuteReader());
-                return dtHang;
+                DataTable dtNhanVien = new DataTable();
+                dtNhanVien.Load(cmd.ExecuteReader());
+                return dtNhanVien;
             }
             finally
             {
@@ -169,11 +169,12 @@ namespace DAL_QLCAFE
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = _conn;
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.CommandText = "[InsertDataIntoTblNhanVien]";
-                cmd.Parameters.AddWithValue("email", nv.EMAIL);
+                cmd.CommandText = "[InsertDataIntoNhanVien]";
                 cmd.Parameters.AddWithValue("tennv", nv.TENNV);
+                cmd.Parameters.AddWithValue("sodienthoai", nv.SDT);
+                cmd.Parameters.AddWithValue("email", nv.EMAIL);
                 cmd.Parameters.AddWithValue("diachi", nv.DIACHI);
-                cmd.Parameters.AddWithValue("vaitro", nv.CHUCVU);
+                cmd.Parameters.AddWithValue("chucVu", nv.CHUCVU);
                 //cmd.Parameters.AddWithValue("tinhtrang", nv.TinhTrang);
 
                 if (cmd.ExecuteNonQuery() > 0)

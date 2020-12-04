@@ -9,14 +9,14 @@ namespace DTO_QLCAFE
     public class DTO_NHANVIEN
     {
         private int manv;
-        private string tennv;     
-        private string diachi;
-        private int sdt;
-        private int chucvu;
         private string email;
         private string matkhau;
-        private string text1;
-        private string text2;
+        private string tennv;     
+        private string diachi;
+        private string sdt;
+        private int chucvu;
+        
+        
 
         public int MANV
         {
@@ -27,50 +27,6 @@ namespace DTO_QLCAFE
             set
             {
                 manv = value;
-            }
-        }
-        public string TENNV
-        {
-            get
-            {
-                return tennv;
-            }
-            set
-            {
-                tennv = value;
-            }
-        }
-        public string DIACHI
-        {
-            get
-            {
-                return diachi;
-            }
-            set
-            {
-                diachi = value;
-            }
-        }
-        public int SDT
-        {
-            get
-            {
-                return sdt;
-            }
-            set
-            {
-                sdt = value;
-            }
-        }
-        public int CHUCVU
-        {
-            get
-            {
-                return chucvu;
-            }
-            set
-            {
-                chucvu = value;
             }
         }
         public string EMAIL
@@ -95,22 +51,78 @@ namespace DTO_QLCAFE
                 matkhau = value;
             }
         }
-
-        public DTO_NHANVIEN(int MaNhanVien, string TenNhanVien, string DiaChi, int SoDienThoai, int ChucVu, string Email, string MatKhau)
+        public string TENNV
         {
-            this.manv = MaNhanVien;
-            this.tennv = TenNhanVien;
-            this.diachi = DiaChi;
-            this.sdt = SoDienThoai;
-            this.chucvu = ChucVu;
+            get
+            {
+                return tennv;
+            }
+            set
+            {
+                tennv = value;
+            }
+        }
+        public string DIACHI
+        {
+            get
+            {
+                return diachi;
+            }
+            set
+            {
+                diachi = value;
+            }
+        }
+        public string SDT
+        {
+            get
+            {
+                return sdt;
+            }
+            set
+            {
+                sdt = value;
+            }
+        }
+        public int CHUCVU
+        {
+            get
+            {
+                return chucvu;
+            }
+            set
+            {
+                chucvu = value;
+            }
+        }
+        
+
+        public DTO_NHANVIEN(string Email, string MatKhau, string TenNhanVien, string DiaChi, string SoDienThoai, int ChucVu)
+        {
+            
             this.email = Email;
             this.matkhau = MatKhau;
+            this.tennv = TenNhanVien; 
+            this.diachi = DiaChi;
+            this.sdt = SoDienThoai;
+            this.chucvu = ChucVu; 
+            
         }
-
         public DTO_NHANVIEN(string Email, string MatKhau)
         {
             this.email = Email;
             this.matkhau = MatKhau;
         }
+        public DTO_NHANVIEN(string Email, string TenNhanVien, string SoDienThoai, string DiaChi, int ChucVu)
+        {
+            this.email = Email;
+            this.tennv = TenNhanVien;
+            this.diachi = DiaChi;
+            this.sdt = SoDienThoai;
+            this.chucvu = ChucVu;
+
+        }
+
+
     }
 }

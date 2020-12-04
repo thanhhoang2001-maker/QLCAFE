@@ -1,5 +1,4 @@
-﻿
-using BUS_QLCAFE;
+﻿using BUS_QLCAFE;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -20,11 +19,6 @@ namespace GUI_QLCAFE
             txtEmailDMK.Text = email;
         }
         BUS_NHANVIEN busNhanVien = new BUS_NHANVIEN();
-
-
-
-
-
 
 
         private void btThoatDoiMK_Click(object sender, EventArgs e)
