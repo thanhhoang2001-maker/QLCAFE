@@ -8,5 +8,12 @@ namespace DAL_QLCAFE
 {
     class DAL_HOADON
     {
+<<<<<<< Updated upstream
+=======
+        //public DataTable GetBill()
+        //{
+
+        //}
+>>>>>>> Stashed changes
     }
 }
