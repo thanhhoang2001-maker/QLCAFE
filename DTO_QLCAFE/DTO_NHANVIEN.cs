@@ -104,5 +104,10 @@ namespace DTO_QLCAFE
             this.email = Email;
             this.matkhau = MatKhau;
         }
+        public DTO_NHANVIEN(string Email, string MatKhau)
+        {
+            this.email = Email;
+            this.matkhau = MatKhau;
+        }
     }
 }
