@@ -20,7 +20,7 @@ namespace BUS_QLCAFE
         }
         public bool InsertKhach(DTO_KHACHHANG khach)
         {
-            return dalKhach.InsertKhach(khach);
+            return dalKhach.insertKhach(khach);
         }
         public bool DeleteKhach(string sodienthoai)
         {
