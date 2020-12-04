@@ -24,7 +24,7 @@ namespace GUI_QLCAFE
 
         private void btDangnhap_Click(object sender, EventArgs e)
         {
-            DTO_NHANVIEN nv = new DTO_NHANVIEN(txtEmail.Text, txtMatkhau.Text);
+            DTO_NHANVIEN nv = new DTO_NHANVIEN();
             nv.EMAIL = txtEmail.Text;
             nv.MATKHAU = busNhanvien.encryption(txtMatkhau.Text);
 

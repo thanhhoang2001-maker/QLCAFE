@@ -15,7 +15,7 @@ namespace GUI_QLCAFE
 {
     public partial class Sanpham : Form
     {
-        BUS_QLKHO busKho = new BUS_QLKHO();
+        BUS_SANPHAM busSanPham = new BUS_SANPHAM();
         string strEmail;
         string duongdanImage;
         string fileName;
@@ -36,7 +36,7 @@ namespace GUI_QLCAFE
 
         private void Sanpham_Load(object sender, EventArgs e)
         {
-            dgvSP.DataSource = busKho.getNguyenLieu();
+            dgvSP.DataSource = busSanPham.GetSanPham();
         }
 
         private void dgvSP_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -83,12 +83,12 @@ namespace GUI_QLCAFE
 
         private void btLuuSP_Click(object sender, EventArgs e)
         {
-            DTO_SANPHAM sp = new DTO_SANPHAM();
-            sp.TENSP = txtTenSP.Text;
-            sp.GIABAN = float.Parse(txtGiabanSP.Text);
-            sp.SOLUONGCON = int.Parse(txtSoluongSP.Text);
-            sp.MOTA = txtMotaSP.Text;
-            sp.HINHANH = duongdanImage;
+            DTO_SANPHAM hang = new DTO_SANPHAM();
+            hang.TENSP = txtTenSP.Text;
+            hang.GIABAN = float.Parse(txtGiabanSP.Text);
+            hang.SOLUONGCON = int.Parse(txtSoluongSP.Text);
+            hang.MOTA = txtMotaSP.Text;
+            hang.HINHANH = duongdanImage;
             File.Copy(fileAddress, fileSavePath, true);
             MessageBox.Show("Đã cập nhật sản phẩm!");
             if (txtTenSP.Text == "" || txtSoluongSP.Text == "" || txtGiabanSP.Text == "" || txtMotaSP.Text == "" || duongdanImage == "")
@@ -97,7 +97,7 @@ namespace GUI_QLCAFE
             }
             else
             {
-                busKho.ThemSanPham(sp, strEmail);
+                busSanPham.InsertSanPham(hang);
             }
         }
 
@@ -120,7 +120,7 @@ namespace GUI_QLCAFE
 
         private void btXoaSP_Click(object sender, EventArgs e)
         {
-            busKho.XoaSanPham(int.Parse(txtMaSanPham.Text));
+            busSanPham.DeleteSanPham(txtMaSanPham.Text);
             MessageBox.Show("Đã xóa sản phẩm!!");
         }
 
@@ -131,19 +131,20 @@ namespace GUI_QLCAFE
 
         private void btSuaSP_Click(object sender, EventArgs e)
         {
-            int masanpham = int.Parse(txtMaSanPham.Text);
-            string tensanpham = txtTenSP.Text;
-            float giaban = float.Parse(txtGiabanSP.Text);
-            int soluong = int.Parse(txtSoluongSP.Text);
-            string hinhanh = duongdanImage;
-            string mota = txtMotaSP.Text;
-            busKho.SuaSanPham(masanpham, tensanpham, soluong, giaban, hinhanh, mota);
+            DTO_SANPHAM hang = new DTO_SANPHAM();
+            hang.MASP = int.Parse(txtMaSanPham.Text);
+            hang.TENSP = txtTenSP.Text;
+            hang.GIABAN = float.Parse(txtGiabanSP.Text);
+            hang.SOLUONGCON = int.Parse(txtSoluongSP.Text);
+            hang.HINHANH = duongdanImage;
+            hang.MOTA = txtMotaSP.Text;
+            busSanPham.UpdateSanPham(hang);
             MessageBox.Show("Đã chỉnh sửa sản phẩm!!");
         }
 
         private void btTimSP_Click(object sender, EventArgs e)
         {
-            busKho.searchSanPham(txtTimSP.Text);
+            busSanPham.SearchSanPham(txtTimSP.Text);
         }
     }
 }
