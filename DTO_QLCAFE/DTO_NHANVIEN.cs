@@ -15,9 +15,7 @@ namespace DTO_QLCAFE
         private int chucvu;
         private string email;
         private string matkhau;
-        private string text1;
-        private string text2;
-
+        
         public int MANV
         {
             get
@@ -103,12 +101,6 @@ namespace DTO_QLCAFE
             this.diachi = DiaChi;
             this.sdt = SoDienThoai;
             this.chucvu = ChucVu;
-            this.email = Email;
-            this.matkhau = MatKhau;
-        }
-
-        public DTO_NHANVIEN(string Email, string MatKhau)
-        {
             this.email = Email;
             this.matkhau = MatKhau;
         }

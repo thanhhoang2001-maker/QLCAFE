@@ -96,7 +96,6 @@
             this.btThuchien.TabIndex = 5;
             this.btThuchien.Text = "THỰC HIỆN";
             this.btThuchien.UseVisualStyleBackColor = false;
-            this.btThuchien.Click += new System.EventHandler(this.btThuchien_Click);
             // 
             // btThoatDoiMK
             // 
@@ -109,7 +108,6 @@
             this.btThoatDoiMK.TabIndex = 6;
             this.btThoatDoiMK.Text = "THOÁT";
             this.btThoatDoiMK.UseVisualStyleBackColor = false;
-            this.btThoatDoiMK.Click += new System.EventHandler(this.btThoatDoiMK_Click);
             // 
             // label2
             // 

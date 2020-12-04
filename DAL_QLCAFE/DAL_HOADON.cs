@@ -11,6 +11,9 @@ namespace DAL_QLCAFE
 {
     public class DAL_HOADON
     {
-        
+        public DataTable GetBill()
+        {
+
+        }
     }
 }
