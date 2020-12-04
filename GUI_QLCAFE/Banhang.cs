@@ -16,12 +16,7 @@ namespace GUI_QLCAFE
         {
             InitializeComponent();
         }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
+        #region TangGIamSoLuong
         private void btSoluongTru_Click(object sender, EventArgs e)
         {
             int sl = int.Parse(txtSoLuong.Text);
@@ -41,6 +36,32 @@ namespace GUI_QLCAFE
             int sl = int.Parse(txtSoLuong.Text);
             sl++;
             txtSoLuong.Text = sl.ToString();
+        }
+        #endregion
+
+        #region LoadDoAn
+        void LoadCategory()
+        {
+
+        }
+        void LoadFoodCategoryID(int id)
+        {
+
+        }
+        #endregion
+        private void btThoatBH_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void Banhang_Load(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void cbbLoaiSP_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

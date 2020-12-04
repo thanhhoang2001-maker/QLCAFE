@@ -1,6 +1,6 @@
 ﻿namespace GUI_QLCAFE
 {
-    partial class FormDangnhap
+    partial class Dangnhap
     {
         /// <summary>
         /// Required designer variable.

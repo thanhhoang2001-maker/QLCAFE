@@ -4,11 +4,12 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data;
 
 namespace DAL_QLCAFE
 {
-    public class DBConnect
+    public class DAL_DANHSACHMONAN : DBConnect
     {
-        protected SqlConnection _conn = new SqlConnection(@"Data Source=VANDUC\SQLEXPRESS;Initial Catalog=QLQuanCaFe;Integrated Security=True");
+
     }
 }

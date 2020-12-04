@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,11 +9,11 @@ namespace DTO_QLCAFE
 {
     class DTO_DANHSACHMONAN
     {
-        private string maloai;
+        private int maloai;
         private int mamonan;
         private string tenmonan;
         private float dongia;
-        public string MALOAI
+        public int MALOAI
         {
             get
             {
@@ -57,12 +58,18 @@ namespace DTO_QLCAFE
             }
         }
 
-        public DTO_DANHSACHMONAN(string MaLoai, int MaMonAn, string TenMonAn, float DonGia)
+        public DTO_DANHSACHMONAN(int MaLoai, int MaMonAn, string TenMonAn, float DonGia)
         {
             this.maloai = MaLoai;
             this.mamonan = MaMonAn;
             this.tenmonan = TenMonAn;
             this.dongia = DonGia;
+        }
+        public DTO_DANHSACHMONAN(DataRow row)
+        {
+            this.maloai = (int)row["MaLoai"];
+            this.mamonan = (int)row["MaMonAn"];
+            this.dongia = (float)Convert.ToDouble(row["DonGia"].ToString());
         }
     }
 }

@@ -49,9 +49,9 @@
             this.txtGiamgiaBH = new System.Windows.Forms.TextBox();
             this.dtpThoigianBH = new System.Windows.Forms.DateTimePicker();
             this.btTinhtienBH = new System.Windows.Forms.Button();
-            this.txtSPBH = new System.Windows.Forms.TextBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
+            this.listViewSanPham = new System.Windows.Forms.ListView();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -73,7 +73,7 @@
             this.panel1.Controls.Add(this.cbbTenSP);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(17, 15);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(471, 592);
             this.panel1.TabIndex = 0;
@@ -82,7 +82,7 @@
             // 
             this.txtSoLuong.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.txtSoLuong.Location = new System.Drawing.Point(161, 316);
-            this.txtSoLuong.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtSoLuong.Margin = new System.Windows.Forms.Padding(4);
             this.txtSoLuong.Multiline = true;
             this.txtSoLuong.Name = "txtSoLuong";
             this.txtSoLuong.Size = new System.Drawing.Size(139, 38);
@@ -94,7 +94,7 @@
             // 
             this.btSoluongThem.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btSoluongThem.Location = new System.Drawing.Point(324, 316);
-            this.btSoluongThem.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btSoluongThem.Margin = new System.Windows.Forms.Padding(4);
             this.btSoluongThem.Name = "btSoluongThem";
             this.btSoluongThem.Size = new System.Drawing.Size(48, 39);
             this.btSoluongThem.TabIndex = 17;
@@ -108,18 +108,19 @@
             this.btThoatBH.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btThoatBH.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btThoatBH.Location = new System.Drawing.Point(63, 513);
-            this.btThoatBH.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btThoatBH.Margin = new System.Windows.Forms.Padding(4);
             this.btThoatBH.Name = "btThoatBH";
             this.btThoatBH.Size = new System.Drawing.Size(331, 59);
             this.btThoatBH.TabIndex = 7;
             this.btThoatBH.Text = "THOÁT";
             this.btThoatBH.UseVisualStyleBackColor = false;
+            this.btThoatBH.Click += new System.EventHandler(this.btThoatBH_Click);
             // 
             // btSoluongTru
             // 
             this.btSoluongTru.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btSoluongTru.Location = new System.Drawing.Point(88, 316);
-            this.btSoluongTru.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btSoluongTru.Margin = new System.Windows.Forms.Padding(4);
             this.btSoluongTru.Name = "btSoluongTru";
             this.btSoluongTru.Size = new System.Drawing.Size(48, 39);
             this.btSoluongTru.TabIndex = 16;
@@ -133,7 +134,7 @@
             this.btXoaBH.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btXoaBH.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btXoaBH.Location = new System.Drawing.Point(63, 447);
-            this.btXoaBH.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btXoaBH.Margin = new System.Windows.Forms.Padding(4);
             this.btXoaBH.Name = "btXoaBH";
             this.btXoaBH.Size = new System.Drawing.Size(331, 59);
             this.btXoaBH.TabIndex = 6;
@@ -146,7 +147,7 @@
             this.btThemBH.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btThemBH.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btThemBH.Location = new System.Drawing.Point(63, 380);
-            this.btThemBH.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btThemBH.Margin = new System.Windows.Forms.Padding(4);
             this.btThemBH.Name = "btThemBH";
             this.btThemBH.Size = new System.Drawing.Size(331, 59);
             this.btThemBH.TabIndex = 5;
@@ -178,17 +179,21 @@
             // cbbLoaiSP
             // 
             this.cbbLoaiSP.FormattingEnabled = true;
+            this.cbbLoaiSP.Items.AddRange(new object[] {
+            "WATER",
+            "FOOD"});
             this.cbbLoaiSP.Location = new System.Drawing.Point(63, 101);
-            this.cbbLoaiSP.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbbLoaiSP.Margin = new System.Windows.Forms.Padding(4);
             this.cbbLoaiSP.Name = "cbbLoaiSP";
             this.cbbLoaiSP.Size = new System.Drawing.Size(333, 24);
             this.cbbLoaiSP.TabIndex = 1;
+            this.cbbLoaiSP.SelectedIndexChanged += new System.EventHandler(this.cbbLoaiSP_SelectedIndexChanged);
             // 
             // cbbTenSP
             // 
             this.cbbTenSP.FormattingEnabled = true;
             this.cbbTenSP.Location = new System.Drawing.Point(63, 228);
-            this.cbbTenSP.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbbTenSP.Margin = new System.Windows.Forms.Padding(4);
             this.cbbTenSP.Name = "cbbTenSP";
             this.cbbTenSP.Size = new System.Drawing.Size(333, 24);
             this.cbbTenSP.TabIndex = 2;
@@ -217,7 +222,7 @@
             this.panel2.Controls.Add(this.dtpThoigianBH);
             this.panel2.Controls.Add(this.btTinhtienBH);
             this.panel2.Location = new System.Drawing.Point(499, 426);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(705, 179);
             this.panel2.TabIndex = 1;
@@ -228,7 +233,7 @@
             this.btCapnhatBH.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btCapnhatBH.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btCapnhatBH.Location = new System.Drawing.Point(25, 117);
-            this.btCapnhatBH.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btCapnhatBH.Margin = new System.Windows.Forms.Padding(4);
             this.btCapnhatBH.Name = "btCapnhatBH";
             this.btCapnhatBH.Size = new System.Drawing.Size(228, 44);
             this.btCapnhatBH.TabIndex = 14;
@@ -273,7 +278,7 @@
             this.txtTongtienBH.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTongtienBH.ForeColor = System.Drawing.Color.Red;
             this.txtTongtienBH.Location = new System.Drawing.Point(441, 128);
-            this.txtTongtienBH.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtTongtienBH.Margin = new System.Windows.Forms.Padding(4);
             this.txtTongtienBH.Multiline = true;
             this.txtTongtienBH.Name = "txtTongtienBH";
             this.txtTongtienBH.Size = new System.Drawing.Size(237, 35);
@@ -284,17 +289,17 @@
             this.txtGiamgiaBH.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtGiamgiaBH.ForeColor = System.Drawing.Color.Yellow;
             this.txtGiamgiaBH.Location = new System.Drawing.Point(441, 71);
-            this.txtGiamgiaBH.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtGiamgiaBH.Margin = new System.Windows.Forms.Padding(4);
             this.txtGiamgiaBH.Multiline = true;
             this.txtGiamgiaBH.Name = "txtGiamgiaBH";
             this.txtGiamgiaBH.Size = new System.Drawing.Size(237, 36);
             this.txtGiamgiaBH.TabIndex = 10;
-            this.txtGiamgiaBH.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // dtpThoigianBH
             // 
+            this.dtpThoigianBH.CustomFormat = "dd/MM/yyyy";
             this.dtpThoigianBH.Location = new System.Drawing.Point(441, 25);
-            this.dtpThoigianBH.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dtpThoigianBH.Margin = new System.Windows.Forms.Padding(4);
             this.dtpThoigianBH.Name = "dtpThoigianBH";
             this.dtpThoigianBH.Size = new System.Drawing.Size(237, 22);
             this.dtpThoigianBH.TabIndex = 9;
@@ -305,23 +310,12 @@
             this.btTinhtienBH.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btTinhtienBH.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btTinhtienBH.Location = new System.Drawing.Point(25, 26);
-            this.btTinhtienBH.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btTinhtienBH.Margin = new System.Windows.Forms.Padding(4);
             this.btTinhtienBH.Name = "btTinhtienBH";
             this.btTinhtienBH.Size = new System.Drawing.Size(228, 81);
             this.btTinhtienBH.TabIndex = 8;
             this.btTinhtienBH.Text = "TÍNH TIỀN";
             this.btTinhtienBH.UseVisualStyleBackColor = false;
-            // 
-            // txtSPBH
-            // 
-            this.txtSPBH.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSPBH.ForeColor = System.Drawing.Color.Yellow;
-            this.txtSPBH.Location = new System.Drawing.Point(499, 63);
-            this.txtSPBH.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.txtSPBH.Multiline = true;
-            this.txtSPBH.Name = "txtSPBH";
-            this.txtSPBH.Size = new System.Drawing.Size(705, 355);
-            this.txtSPBH.TabIndex = 14;
             // 
             // panel3
             // 
@@ -329,7 +323,7 @@
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel3.Controls.Add(this.label7);
             this.panel3.Location = new System.Drawing.Point(499, 16);
-            this.panel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(705, 39);
             this.panel3.TabIndex = 15;
@@ -345,18 +339,28 @@
             this.label7.TabIndex = 8;
             this.label7.Text = "SẢN PHẨM ĐÃ CHỌN";
             // 
+            // listViewSanPham
+            // 
+            this.listViewSanPham.HideSelection = false;
+            this.listViewSanPham.Location = new System.Drawing.Point(499, 63);
+            this.listViewSanPham.Name = "listViewSanPham";
+            this.listViewSanPham.Size = new System.Drawing.Size(705, 356);
+            this.listViewSanPham.TabIndex = 16;
+            this.listViewSanPham.UseCompatibleStateImageBehavior = false;
+            // 
             // Banhang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1220, 623);
+            this.Controls.Add(this.listViewSanPham);
             this.Controls.Add(this.panel3);
-            this.Controls.Add(this.txtSPBH);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Banhang";
             this.Text = "Banhang";
+            this.Load += new System.EventHandler(this.Banhang_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
@@ -364,7 +368,6 @@
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -387,12 +390,12 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txtSPBH;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button btCapnhatBH;
         private System.Windows.Forms.TextBox txtSoLuong;
         private System.Windows.Forms.Button btSoluongThem;
         private System.Windows.Forms.Button btSoluongTru;
+        private System.Windows.Forms.ListView listViewSanPham;
     }
 }

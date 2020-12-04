@@ -127,6 +127,5 @@ namespace DAL_QLCAFE
                 _conn.Close();
             }
         }
-
     }
 }

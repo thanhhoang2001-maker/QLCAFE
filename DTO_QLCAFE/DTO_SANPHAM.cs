@@ -15,7 +15,7 @@ namespace DTO_QLCAFE
         private float giaban;
         private string hinhanh;
         private string mota;
-        private int manv;
+        private string email;
 
         public int MASP
         {
@@ -94,6 +94,17 @@ namespace DTO_QLCAFE
                 mota = value;
             }
         }
+        public string EMAIL
+        {
+            get
+            {
+                return email;
+            }
+            set
+            {
+                email = value;
+            }
+        }
 
         public DTO_SANPHAM(int MaSanPham, string MaLoai, string TenSanPham, int SoLuongCon, float GiaBan, string HinhAnh, string MoTa)
         {
@@ -104,6 +115,10 @@ namespace DTO_QLCAFE
             this.giaban = GiaBan;
             this.hinhanh = HinhAnh;
             this.mota = MoTa;
+        }
+        public DTO_SANPHAM()
+        {
+
         }
     }
 }
