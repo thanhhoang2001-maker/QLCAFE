@@ -183,7 +183,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BUS_QLCAFE\BUS_QLCAFE.csproj">
-      <Project>{062c2fda-55b5-45bb-be99-c3d3b3e26fc4}</Project>
+      <Project>{062C2FDA-55B5-45BB-BE99-C3D3B3E26FC4}</Project>
       <Name>BUS_QLCAFE</Name>
     </ProjectReference>
     <ProjectReference Include="..\DTO_QLCAFE\DTO_QLCAFE.csproj">
