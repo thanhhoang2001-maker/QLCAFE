@@ -12,9 +12,9 @@ using System.Windows.Forms;
 
 namespace GUI_QLCAFE
 {
-    public partial class Dangnhap : Form
+    public partial class FormDangnhap : Form
     {
-        public Dangnhap()
+        public FormDangnhap()
         {
             InitializeComponent();
         }
@@ -24,8 +24,10 @@ namespace GUI_QLCAFE
 
         private void btDangnhap_Click(object sender, EventArgs e)
         {
-            DTO_NHANVIEN nv = new DTO_NHANVIEN();
+            
+            DTO_NHANVIEN nv = new DTO_NHANVIEN(txtEmail.Text, txtMatkhau.Text);
             nv.EMAIL = txtEmail.Text;
+            nv.MATKHAU = txtMatkhau.Text;
             nv.MATKHAU = busNhanvien.encryption(txtMatkhau.Text);
 
             if (busNhanvien.NhanVienDangNhap(nv))
@@ -37,7 +39,7 @@ namespace GUI_QLCAFE
                 ShowInTaskbar = false;
 
                 Main main = new Main();
-               
+
                 main.Show();
             }
             else
@@ -71,26 +73,20 @@ namespace GUI_QLCAFE
             {
                 MessageBox.Show("Mật khẩu mới đã được gửi đển email, mời kiểm tra");
             }
-
         }
 
         private void btThoatDN_Click(object sender, EventArgs e)
         {
-            //Visible = false;
-            //ShowInTaskbar = false;
+            Visible = false;
+            ShowInTaskbar = false;
 
-            //DoiMK doimatkhau = new DoiMK();
-            //doimatkhau.Activate();
-            //doimatkhau.Show();
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
+            DoiMK doimatkhau = new DoiMK();
+            doimatkhau.Activate();
+            doimatkhau.Show();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-
             Visible = false;
             ShowInTaskbar = false;
 
