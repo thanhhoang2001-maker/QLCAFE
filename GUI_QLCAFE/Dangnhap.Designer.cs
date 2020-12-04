@@ -1,6 +1,6 @@
 ﻿namespace GUI_QLCAFE
 {
-    partial class Dangnhap
+    partial class FormDangnhap
     {
         /// <summary>
         /// Required designer variable.
@@ -37,7 +37,6 @@
             this.btThoatDN = new System.Windows.Forms.Button();
             this.btDangnhap = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -117,7 +116,6 @@
             this.btThoatDN.TabIndex = 3;
             this.btThoatDN.Text = "THOÁT";
             this.btThoatDN.UseVisualStyleBackColor = false;
-            this.btThoatDN.Click += new System.EventHandler(this.btThoatDN_Click);
             // 
             // btDangnhap
             // 
@@ -145,16 +143,6 @@
             this.label3.TabIndex = 7;
             this.label3.Text = "COFFEE MANAGEMENT";
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(532, 189);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 8;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // FormDangnhap
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -162,7 +150,6 @@
             this.BackgroundImage = global::GUI_QLCAFE.Properties.Resources.image0__1_;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(771, 404);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.panel1);
             this.Name = "FormDangnhap";
@@ -185,7 +172,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtMatkhau;
         private System.Windows.Forms.TextBox txtEmail;
-        private System.Windows.Forms.Button button1;
     }
 }
 

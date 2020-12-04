@@ -70,11 +70,11 @@ namespace GUI_QLCAFE
 
         private void btDoimatkhau_Click(object sender, EventArgs e)
         {
-            Visible = false;
-            ShowInTaskbar = false;
-            DoiMK doimatkhau = new DoiMK();
-            doimatkhau.Activate();
-            doimatkhau.Show();
+            //Visible = false;
+            //ShowInTaskbar = false;
+            //DoiMK doimatkhau = new DoiMK();
+            //doimatkhau.Activate();
+            //doimatkhau.Show();
         }
 
         private void btDangxuat_Click(object sender, EventArgs e)

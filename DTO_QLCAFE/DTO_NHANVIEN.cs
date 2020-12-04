@@ -11,7 +11,7 @@ namespace DTO_QLCAFE
         private int manv;
         private string tennv;     
         private string diachi;
-        private int sdt;
+        private string sdt;
         private int chucvu;
         private string email;
         private string matkhau;
@@ -49,7 +49,7 @@ namespace DTO_QLCAFE
                 diachi = value;
             }
         }
-        public int SDT
+        public string SDT
         {
             get
             {
@@ -94,7 +94,7 @@ namespace DTO_QLCAFE
             }
         }
 
-        public DTO_NHANVIEN(int MaNhanVien, string TenNhanVien, string DiaChi, int SoDienThoai, int ChucVu, string Email, string MatKhau)
+        public DTO_NHANVIEN(int MaNhanVien, string TenNhanVien, string DiaChi, string SoDienThoai, int ChucVu, string Email, string MatKhau)
         {
             this.manv = MaNhanVien;
             this.tennv = TenNhanVien;
@@ -108,6 +108,16 @@ namespace DTO_QLCAFE
         {
             this.email = Email;
             this.matkhau = MatKhau;
+        }
+        public DTO_NHANVIEN( string TenNhanVien, string Email, string DiaChi, string SoDienThoai, int ChucVu)
+        {
+            
+            this.tennv = TenNhanVien;
+            this.email = Email;
+            this.diachi = DiaChi;
+            this.sdt = SoDienThoai;
+            this.chucvu = ChucVu;
+            
         }
     }
 }

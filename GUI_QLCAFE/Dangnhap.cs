@@ -75,24 +75,8 @@ namespace GUI_QLCAFE
             }
         }
 
-        private void btThoatDN_Click(object sender, EventArgs e)
-        {
-            Visible = false;
-            ShowInTaskbar = false;
+        
 
-            DoiMK doimatkhau = new DoiMK();
-            doimatkhau.Activate();
-            doimatkhau.Show();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            Visible = false;
-            ShowInTaskbar = false;
-
-            Main main = new Main();
-            main.Activate();
-            main.Show();
-        }
+        
     }
 }

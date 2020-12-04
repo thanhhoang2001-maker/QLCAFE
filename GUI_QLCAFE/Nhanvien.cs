@@ -24,9 +24,9 @@ namespace GUI_QLCAFE
         {
             dgvNV.DataSource = busNhanVien.getNhanVien();
             dgvNV.Columns[0].HeaderText = "Tên Nhân Viên";
-            dgvNV.Columns[1].HeaderText = "Số Điện Thoại";
-            dgvNV.Columns[2].HeaderText = "Email";
-            dgvNV.Columns[3].HeaderText = "Địa chỉ";
+            dgvNV.Columns[1].HeaderText = "EMail";
+            dgvNV.Columns[2].HeaderText = "Số Điện Thoại";
+            dgvNV.Columns[3].HeaderText = "Địa Chỉ";
             dgvNV.Columns[4].HeaderText = "Chức Vụ";
         }
 
@@ -39,8 +39,8 @@ namespace GUI_QLCAFE
         {
             txtTimNV.Text = "Nhập tên nhân viên";
             txtTenNV.Text = null;
-            txtEmailNV.Text = null;
             txtSdtNV.Text = null;
+            txtEmailNV.Text = null;
             txtDiachiNV.Text = null;
 
             txtTenNV.Enabled = false;
@@ -170,7 +170,7 @@ namespace GUI_QLCAFE
             }
             else if (txtSdtNV.Text.Trim().Length == 0)
             {
-                MessageBox.Show("Bạn phải nhập địa chỉ", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Bạn phải nhập số điện thoại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 txtSdtNV.Focus();
                 return;
             }
@@ -188,7 +188,7 @@ namespace GUI_QLCAFE
             }
             if (txtDiachiNV.Text.Trim().Length == 0)
             {
-                MessageBox.Show("Bạn phải nhập email", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Bạn phải nhập Địa CHỉ==hỉ", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 txtDiachiNV.Focus();
                 return;
             }
@@ -222,32 +222,34 @@ namespace GUI_QLCAFE
 
         private void dgvNV_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (dgvNV.Rows.Count > 1)
-            {
-                btLuuNV.Enabled = false;
-                txtTenNV.Enabled = true;
-                txtSdtNV.Enabled = true;
-                txtEmailNV.Enabled = true;
-                txtDiachiNV.Enabled = true;
-                rbRoleNV.Enabled = true;
-                rbRoleQL.Enabled = true;
-                btSuaNV.Enabled = true;
-                btXoaNV.Enabled = true;
+            //if (dgvNV.Rows.Count > 1)
+            //{
+            //    btLuuNV.Enabled = false;
+            //    txtTenNV.Enabled = true;
+            //    txtSdtNV.Enabled = true;
+            //    txtEmailNV.Enabled = true;
+            //    txtDiachiNV.Enabled = true;
+            //    rbRoleNV.Enabled = true;
+            //    rbRoleQL.Enabled = true;
+            //    btSuaNV.Enabled = true;
+            //    btXoaNV.Enabled = true;
 
-                txtTenNV.Text = dgvNV.CurrentRow.Cells[0].Value.ToString();
-                txtSdtNV.Text = dgvNV.CurrentRow.Cells[1].Value.ToString();
-                txtEmailNV.Text = dgvNV.CurrentRow.Cells[2].Value.ToString();
-                txtDiachiNV.Text = dgvNV.CurrentRow.Cells[3].Value.ToString();
+                txtTenNV.Text = dgvNV.CurrentRow.Cells["TenNhanVien"].Value.ToString();
+                txtSdtNV.Text = dgvNV.CurrentRow.Cells["SoDienThoai"].Value.ToString();
+                txtEmailNV.Text = dgvNV.CurrentRow.Cells["Email"].Value.ToString();
+                txtDiachiNV.Text = dgvNV.CurrentRow.Cells["DiaChi"].Value.ToString();
 
-                if (int.Parse(dgvNV.CurrentRow.Cells[4].Value.ToString()) == 1)
-                    rbRoleQL.Checked = true;
-                else
-                    rbRoleNV.Checked = true;
-            }
-            else
-            {
-                MessageBox.Show("Bảng không tồn tại dữ liệu", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
+            //    if (int.Parse(dgvNV.CurrentRow.Cells["ChucVu"].Value.ToString()) == 1)
+            //        rbRoleQL.Checked = true;
+            //    else
+            //        rbRoleNV.Checked = true;
+            //}
+            //else
+            //{
+            //    MessageBox.Show("Bảng không tồn tại dữ liệu", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            //}
         }
+
+
     }
 }

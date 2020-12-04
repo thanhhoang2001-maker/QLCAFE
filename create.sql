@@ -144,7 +144,7 @@ CREATE PROCEDURE [dbo].[InsertDataIntoNhanVien]
 	
 AS
 BEGIN
-	INSERT INTO NHANVIEN(  TenNhanVien, SoDienThoai,Email, DiaChi, ChucVu) 
+	INSERT INTO NHANVIEN(TenNhanVien, SoDienThoai,Email, DiaChi, ChucVu) 
 	VALUES ( @tennv,@sodienthoai,@email,@diachi,@chucvu)
 END
 GO
