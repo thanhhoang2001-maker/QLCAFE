@@ -127,6 +127,8 @@ else
 return -1
 GO
 
+select * from NHANVIEN
+
 Create PROCEDURE [dbo].[LayVaiTroNV] @email varchar(50)
 AS
 BEGIN
@@ -136,16 +138,16 @@ END
 GO
 
 CREATE PROCEDURE [dbo].[InsertDataIntoNhanVien]
+	@email nvarchar(100),
 	@tennv nvarchar(50),
 	@sodienthoai VARCHAR(15),
-	@email nvarchar(100),
 	@diachi nvarchar(100),
 	@chucVu tinyint
 	
 AS
 BEGIN
-	INSERT INTO NHANVIEN(  TenNhanVien, SoDienThoai,Email, DiaChi, ChucVu) 
-	VALUES ( @tennv,@sodienthoai,@email,@diachi,@chucvu)
+	INSERT INTO NHANVIEN(Email,TenNhanVien, SoDienThoai, DiaChi, ChucVu) 
+	VALUES ( @email,@tennv,@sodienthoai,@diachi,@chucvu)
 END
 GO
 

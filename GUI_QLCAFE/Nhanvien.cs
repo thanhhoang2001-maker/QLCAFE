@@ -39,8 +39,8 @@ namespace GUI_QLCAFE
         {
             txtTimNV.Text = "Nhập tên nhân viên";
             txtTenNV.Text = null;
-            txtEmailNV.Text = null;
             txtSdtNV.Text = null;
+            txtEmailNV.Text = null;
             txtDiachiNV.Text = null;
 
             txtTenNV.Enabled = false;
@@ -73,15 +73,16 @@ namespace GUI_QLCAFE
 
         private void btThemNV_Click(object sender, EventArgs e)
         {
-            txtEmailNV.Text = null;
             txtTenNV.Text = null;
-            txtDiachiNV.Text = null;
             txtSdtNV.Text = null;
+            txtEmailNV.Text = null;
+            txtDiachiNV.Text = null;
 
-            txtEmailNV.Enabled = true;
             txtTenNV.Enabled = true;
-            txtDiachiNV.Enabled = true;
             txtSdtNV.Enabled = true;
+            txtEmailNV.Enabled = true;
+            txtDiachiNV.Enabled = true;
+            
 
             rbRoleNV.Enabled = true;
             rbRoleQL.Enabled = true;
@@ -170,7 +171,7 @@ namespace GUI_QLCAFE
             }
             else if (txtSdtNV.Text.Trim().Length == 0)
             {
-                MessageBox.Show("Bạn phải nhập địa chỉ", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Bạn phải nhập số điện thoại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 txtSdtNV.Focus();
                 return;
             }
@@ -188,7 +189,7 @@ namespace GUI_QLCAFE
             }
             if (txtDiachiNV.Text.Trim().Length == 0)
             {
-                MessageBox.Show("Bạn phải nhập email", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Bạn phải nhập địa chỉ", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 txtDiachiNV.Focus();
                 return;
             }
@@ -234,9 +235,9 @@ namespace GUI_QLCAFE
                 btSuaNV.Enabled = true;
                 btXoaNV.Enabled = true;
 
-                txtTenNV.Text = dgvNV.CurrentRow.Cells[0].Value.ToString();
+                txtTenNV.Text = dgvNV.CurrentRow.Cells[2].Value.ToString();
                 txtSdtNV.Text = dgvNV.CurrentRow.Cells[1].Value.ToString();
-                txtEmailNV.Text = dgvNV.CurrentRow.Cells[2].Value.ToString();
+                txtEmailNV.Text = dgvNV.CurrentRow.Cells[0].Value.ToString();
                 txtDiachiNV.Text = dgvNV.CurrentRow.Cells[3].Value.ToString();
 
                 if (int.Parse(dgvNV.CurrentRow.Cells[4].Value.ToString()) == 1)
