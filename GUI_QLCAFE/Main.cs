@@ -17,11 +17,6 @@ namespace GUI_QLCAFE
             InitializeComponent();
         }
 
-        private void label7_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btNhanvien_Click(object sender, EventArgs e)
         {
             Visible = false;
@@ -70,18 +65,18 @@ namespace GUI_QLCAFE
 
         private void btDoimatkhau_Click(object sender, EventArgs e)
         {
-            Visible = false;
-            ShowInTaskbar = false;
-            DoiMK doimatkhau = new DoiMK();
-            doimatkhau.Activate();
-            doimatkhau.Show();
+            //Visible = false;
+            //ShowInTaskbar = false;
+            //DoiMK doimatkhau = new DoiMK();
+            //doimatkhau.Activate();
+            //doimatkhau.Show();
         }
 
         private void btDangxuat_Click(object sender, EventArgs e)
         {
             Visible = false;
             ShowInTaskbar = false;
-            FormDangnhap dangnhap = new FormDangnhap();
+            Dangnhap dangnhap = new Dangnhap();
             dangnhap.Activate();
             dangnhap.Show();
         }
@@ -90,5 +85,22 @@ namespace GUI_QLCAFE
         {
             Close();
         }
+
+        //private void btNhanvien_Click(object sender, EventArgs e)
+        //{
+
+        //}
+
+        //private void btBanhang_Click(object sender, EventArgs e)
+        //{
+        //    Form formBanHang = new Banhang();
+        //    formBanHang.Show();
+        //}
+
+        //private void btSanpham_Click(object sender, EventArgs e)
+        //{
+        //    Sanpham frmSanPham = new Sanpham();
+        //    frmSanPham.Show();
+        //}
     }
 }
