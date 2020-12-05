@@ -32,18 +32,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="JMaterialTextbox">
-      <HintPath>C:\Users\Admin\Desktop\JControls\JMaterialTextbox.dll</HintPath>
-    </Reference>
-    <Reference Include="JMetroTextBox">
-      <HintPath>C:\Users\Admin\Desktop\JControls\JMetroTextBox.dll</HintPath>
-    </Reference>
-    <Reference Include="JTextBox">
-      <HintPath>C:\Users\Admin\Desktop\JControls\JTextBox.dll</HintPath>
-    </Reference>
-    <Reference Include="JTextBox2">
-      <HintPath>C:\Users\Admin\Desktop\JControls\JTextBox2.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -195,12 +183,8 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BUS_QLCAFE\BUS_QLCAFE.csproj">
-      <Project>{062c2fda-55b5-45bb-be99-c3d3b3e26fc4}</Project>
+      <Project>{062C2FDA-55B5-45BB-BE99-C3D3B3E26FC4}</Project>
       <Name>BUS_QLCAFE</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\DAL_QLCAFE\DAL_QLCAFE.csproj">
-      <Project>{a51699fe-a0b7-484e-86fd-2a39e8075959}</Project>
-      <Name>DAL_QLCAFE</Name>
     </ProjectReference>
     <ProjectReference Include="..\DTO_QLCAFE\DTO_QLCAFE.csproj">
       <Project>{28a646f2-c5ff-46d2-84f4-733f05c75099}</Project>

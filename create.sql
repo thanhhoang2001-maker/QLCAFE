@@ -304,5 +304,8 @@ BEGIN
 END
 GO
 
-------
-exec InsertDataIntoNhanVien 'Hoang', '0939503204', 'thanhhoangok2309@gmail.com', 'To Ky', 1
+EXEC dbo.InsertDataIntoNhanVien @email = N'hoangntps11683@fpt.edu.vn', -- nvarchar(100)
+    @tennv = N'Hoang', -- nvarchar(50)
+    @diachi = N'To Ky', -- nvarchar(100)
+    @chucVu = 1, -- tinyint
+    @sodienthoai = '0939503204' -- varchar(15)

@@ -83,7 +83,6 @@
             this.lbQuenmk.Size = new System.Drawing.Size(94, 13);
             this.lbQuenmk.TabIndex = 6;
             this.lbQuenmk.Text = "Quên mật khẩu ?";
-            this.lbQuenmk.Click += new System.EventHandler(this.lbQuenmk_Click);
             // 
             // label2
             // 
