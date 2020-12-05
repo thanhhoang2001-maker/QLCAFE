@@ -16,6 +16,9 @@ namespace GUI_QLCAFE
         {
             InitializeComponent();
         }
+        public static string mail;
+        public static int chucvu;
+
 
         private void label7_Click(object sender, EventArgs e)
         {
@@ -70,11 +73,11 @@ namespace GUI_QLCAFE
 
         private void btDoimatkhau_Click(object sender, EventArgs e)
         {
-            //Visible = false;
-            //ShowInTaskbar = false;
-            //DoiMK doimatkhau = new DoiMK();
-            //doimatkhau.Activate();
-            //doimatkhau.Show();
+            Visible = false;
+            ShowInTaskbar = false;
+            DoiMK doimatkhau = new DoiMK(mail);
+            doimatkhau.Activate();
+            doimatkhau.Show();
         }
 
         private void btDangxuat_Click(object sender, EventArgs e)

@@ -79,11 +79,11 @@ namespace BUS_QLCAFE
                 
                 SmtpClient client = new SmtpClient("smtp.gmail.com", 25);
                 
-                NetworkCredential cred = new NetworkCredential("ducnvps12486@fpt.edu.vn", "Vanduc@1007");
+                NetworkCredential cred = new NetworkCredential("hoangntps11683@fpt.edu.vn", "07103659615aA");
                 
                 MailMessage Msg = new MailMessage();
                 
-                Msg.From = new MailAddress("ducnvps12486@fpt.edu.vn");
+                Msg.From = new MailAddress("hoangntps11683@fpt.edu.vn");
                 
                 Msg.To.Add(email);
                

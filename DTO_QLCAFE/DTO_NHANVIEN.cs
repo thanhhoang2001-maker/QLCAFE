@@ -119,5 +119,9 @@ namespace DTO_QLCAFE
             this.chucvu = ChucVu;
             
         }
+        public DTO_NHANVIEN()
+        {
+
+        }
     }
 }
