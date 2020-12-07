@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.txtEmailKH = new System.Windows.Forms.TextBox();
+            this.dtpNgaysinhKH = new System.Windows.Forms.DateTimePicker();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -36,16 +38,14 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txtSdtKH = new System.Windows.Forms.TextBox();
             this.txtTenKH = new System.Windows.Forms.TextBox();
-            this.dtpNgaysinhKH = new System.Windows.Forms.DateTimePicker();
-            this.txtEmailKH = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btThoatKH = new System.Windows.Forms.Button();
             this.btLuuKH = new System.Windows.Forms.Button();
             this.btSuaKH = new System.Windows.Forms.Button();
             this.btXoaKH = new System.Windows.Forms.Button();
             this.btThemKH = new System.Windows.Forms.Button();
-            this.txtTimKH = new System.Windows.Forms.TextBox();
             this.btTimKH = new System.Windows.Forms.Button();
+            this.txtTimKH = new System.Windows.Forms.TextBox();
             this.dgvKH = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -70,6 +70,22 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(882, 174);
             this.panel1.TabIndex = 1;
+            // 
+            // txtEmailKH
+            // 
+            this.txtEmailKH.Location = new System.Drawing.Point(527, 120);
+            this.txtEmailKH.Multiline = true;
+            this.txtEmailKH.Name = "txtEmailKH";
+            this.txtEmailKH.Size = new System.Drawing.Size(213, 30);
+            this.txtEmailKH.TabIndex = 15;
+            // 
+            // dtpNgaysinhKH
+            // 
+            this.dtpNgaysinhKH.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpNgaysinhKH.Location = new System.Drawing.Point(527, 68);
+            this.dtpNgaysinhKH.Name = "dtpNgaysinhKH";
+            this.dtpNgaysinhKH.Size = new System.Drawing.Size(233, 22);
+            this.dtpNgaysinhKH.TabIndex = 14;
             // 
             // label4
             // 
@@ -142,22 +158,6 @@
             this.txtTenKH.Size = new System.Drawing.Size(213, 30);
             this.txtTenKH.TabIndex = 1;
             // 
-            // dtpNgaysinhKH
-            // 
-            this.dtpNgaysinhKH.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpNgaysinhKH.Location = new System.Drawing.Point(527, 68);
-            this.dtpNgaysinhKH.Name = "dtpNgaysinhKH";
-            this.dtpNgaysinhKH.Size = new System.Drawing.Size(233, 22);
-            this.dtpNgaysinhKH.TabIndex = 14;
-            // 
-            // txtEmailKH
-            // 
-            this.txtEmailKH.Location = new System.Drawing.Point(527, 120);
-            this.txtEmailKH.Multiline = true;
-            this.txtEmailKH.Name = "txtEmailKH";
-            this.txtEmailKH.Size = new System.Drawing.Size(213, 30);
-            this.txtEmailKH.TabIndex = 15;
-            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Azure;
@@ -185,6 +185,7 @@
             this.btThoatKH.TabIndex = 6;
             this.btThoatKH.Text = "THOÁT";
             this.btThoatKH.UseVisualStyleBackColor = false;
+            this.btThoatKH.Click += new System.EventHandler(this.btThoatKH_Click);
             // 
             // btLuuKH
             // 
@@ -198,6 +199,7 @@
             this.btLuuKH.TabIndex = 5;
             this.btLuuKH.Text = "LƯU KHÁCH HÀNG";
             this.btLuuKH.UseVisualStyleBackColor = false;
+            this.btLuuKH.Click += new System.EventHandler(this.btLuuKH_Click);
             // 
             // btSuaKH
             // 
@@ -211,6 +213,7 @@
             this.btSuaKH.TabIndex = 4;
             this.btSuaKH.Text = "CHỈNH SỬA KHÁCH HÀNG";
             this.btSuaKH.UseVisualStyleBackColor = false;
+            this.btSuaKH.Click += new System.EventHandler(this.btSuaKH_Click);
             // 
             // btXoaKH
             // 
@@ -224,6 +227,7 @@
             this.btXoaKH.TabIndex = 3;
             this.btXoaKH.Text = "XÓA KHÁCH HÀNG";
             this.btXoaKH.UseVisualStyleBackColor = false;
+            this.btXoaKH.Click += new System.EventHandler(this.btXoaKH_Click);
             // 
             // btThemKH
             // 
@@ -237,14 +241,7 @@
             this.btThemKH.TabIndex = 2;
             this.btThemKH.Text = "THÊM KHÁCH HÀNG";
             this.btThemKH.UseVisualStyleBackColor = false;
-            // 
-            // txtTimKH
-            // 
-            this.txtTimKH.Location = new System.Drawing.Point(13, 20);
-            this.txtTimKH.Multiline = true;
-            this.txtTimKH.Name = "txtTimKH";
-            this.txtTimKH.Size = new System.Drawing.Size(202, 34);
-            this.txtTimKH.TabIndex = 0;
+            this.btThemKH.Click += new System.EventHandler(this.btThemKH_Click);
             // 
             // btTimKH
             // 
@@ -256,6 +253,16 @@
             this.btTimKH.Size = new System.Drawing.Size(87, 34);
             this.btTimKH.TabIndex = 1;
             this.btTimKH.UseVisualStyleBackColor = false;
+            this.btTimKH.Click += new System.EventHandler(this.btTimKH_Click);
+            // 
+            // txtTimKH
+            // 
+            this.txtTimKH.Location = new System.Drawing.Point(13, 20);
+            this.txtTimKH.Multiline = true;
+            this.txtTimKH.Name = "txtTimKH";
+            this.txtTimKH.Size = new System.Drawing.Size(202, 34);
+            this.txtTimKH.TabIndex = 0;
+            this.txtTimKH.TextChanged += new System.EventHandler(this.txtTimKH_TextChanged);
             // 
             // dgvKH
             // 
@@ -264,6 +271,7 @@
             this.dgvKH.Name = "dgvKH";
             this.dgvKH.Size = new System.Drawing.Size(560, 304);
             this.dgvKH.TabIndex = 17;
+            this.dgvKH.Click += new System.EventHandler(this.dgvKH_Click);
             // 
             // Khachhang
             // 
@@ -275,6 +283,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "Khachhang";
             this.Text = "Khachhang";
+            this.Load += new System.EventHandler(this.Khachhang_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);

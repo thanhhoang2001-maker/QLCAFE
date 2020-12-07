@@ -20,9 +20,9 @@ namespace DAL_QLCAFE
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.CommandText = "[DanhSachKhach]";
                 cmd.Connection = _conn;
-                DataTable dtKhach = new DataTable();
-                dtKhach.Load(cmd.ExecuteReader());
-                return dtKhach;
+                DataTable dtKH = new DataTable();
+                dtKH.Load(cmd.ExecuteReader());
+                return dtKH;
             }
             finally
             {
