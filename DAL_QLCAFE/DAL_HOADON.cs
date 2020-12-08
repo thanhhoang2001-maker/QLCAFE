@@ -6,14 +6,4 @@ using System.Threading.Tasks;
 
 namespace DAL_QLCAFE
 {
-    public class DAL_HOADON
-    {
-<<<<<<< Updated upstream
-=======
-        //public DataTable GetBill()
-        //{
-
-        //}
->>>>>>> Stashed changes
-    }
 }

@@ -199,10 +199,10 @@ CREATE PROCEDURE [dbo].[InsertDataIntoTblKhach]
 @dienThoai varchar(15),@tenKhach nvarchar(100), @email varchar(100), @ngaysinh DATETIME
 AS
 BEGIN
-DECLARE @Manv VARCHAR(20);
-select @Manv = MaNhanVien from dbo.NHANVIEN where Email = @email
-INSERT INTO KHACHHANG (SoDienThoai, TenKhachHang, NgaySinh,MaNhanVien) 
-VALUES ( @dienThoai,@tenKhach, @ngaysinh,@Manv)
+--DECLARE @Manv VARCHAR(20);
+--select @Manv = MaNhanVien from dbo.NHANVIEN where Email = @email
+INSERT INTO KHACHHANG (SoDienThoai, TenKhachHang, NgaySinh) 
+VALUES ( @dienThoai,@tenKhach, @ngaysinh)
 END
 GO
 
