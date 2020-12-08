@@ -18,14 +18,7 @@ namespace GUI_QLCAFE
         }
         public static string mail;
         public static int chucvu;
-
-
-        private void label7_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btNhanvien_Click(object sender, EventArgs e)
+        private void btNhanvien_Click_1(object sender, EventArgs e)
         {
             Visible = false;
             ShowInTaskbar = false;
@@ -35,7 +28,7 @@ namespace GUI_QLCAFE
             nhanvien.Show();
         }
 
-        private void btKhachhang_Click(object sender, EventArgs e)
+        private void btKhachhang_Click_1(object sender, EventArgs e)
         {
             Visible = false;
             ShowInTaskbar = false;
@@ -44,7 +37,7 @@ namespace GUI_QLCAFE
             khachhang.Show();
         }
 
-        private void btSanpham_Click(object sender, EventArgs e)
+        private void btSanpham_Click_1(object sender, EventArgs e)
         {
             Visible = false;
             ShowInTaskbar = false;
@@ -53,7 +46,7 @@ namespace GUI_QLCAFE
             sanpham.Show();
         }
 
-        private void btBanhang_Click(object sender, EventArgs e)
+        private void btBanhang_Click_1(object sender, EventArgs e)
         {
             Visible = false;
             ShowInTaskbar = false;
@@ -62,7 +55,7 @@ namespace GUI_QLCAFE
             banhang.Show();
         }
 
-        private void btThongke_Click(object sender, EventArgs e)
+        private void btThongke_Click_1(object sender, EventArgs e)
         {
             Visible = false;
             ShowInTaskbar = false;
@@ -71,7 +64,7 @@ namespace GUI_QLCAFE
             thongke.Show();
         }
 
-        private void btDoimatkhau_Click(object sender, EventArgs e)
+        private void btDoimatkhau_Click_1(object sender, EventArgs e)
         {
             Visible = false;
             ShowInTaskbar = false;
@@ -80,7 +73,7 @@ namespace GUI_QLCAFE
             doimatkhau.Show();
         }
 
-        private void btDangxuat_Click(object sender, EventArgs e)
+        private void btDangxuat_Click_1(object sender, EventArgs e)
         {
             Visible = false;
             ShowInTaskbar = false;
@@ -89,7 +82,7 @@ namespace GUI_QLCAFE
             dangnhap.Show();
         }
 
-        private void btThoatMain_Click(object sender, EventArgs e)
+        private void btThoatMain_Click_1(object sender, EventArgs e)
         {
             Close();
         }

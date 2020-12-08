@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.txtEmailKH = new System.Windows.Forms.TextBox();
+            this.dtpNgaysinhKH = new System.Windows.Forms.DateTimePicker();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -36,17 +38,16 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txtSdtKH = new System.Windows.Forms.TextBox();
             this.txtTenKH = new System.Windows.Forms.TextBox();
-            this.dtpNgaysinhKH = new System.Windows.Forms.DateTimePicker();
-            this.txtEmailKH = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btThoatKH = new System.Windows.Forms.Button();
             this.btLuuKH = new System.Windows.Forms.Button();
             this.btSuaKH = new System.Windows.Forms.Button();
             this.btXoaKH = new System.Windows.Forms.Button();
             this.btThemKH = new System.Windows.Forms.Button();
-            this.txtTimKH = new System.Windows.Forms.TextBox();
             this.btTimKH = new System.Windows.Forms.Button();
+            this.txtTimKH = new System.Windows.Forms.TextBox();
             this.dgvKH = new System.Windows.Forms.DataGridView();
+            this.btTroveKH = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvKH)).BeginInit();
@@ -70,6 +71,22 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(882, 174);
             this.panel1.TabIndex = 1;
+            // 
+            // txtEmailKH
+            // 
+            this.txtEmailKH.Location = new System.Drawing.Point(527, 120);
+            this.txtEmailKH.Multiline = true;
+            this.txtEmailKH.Name = "txtEmailKH";
+            this.txtEmailKH.Size = new System.Drawing.Size(213, 30);
+            this.txtEmailKH.TabIndex = 15;
+            // 
+            // dtpNgaysinhKH
+            // 
+            this.dtpNgaysinhKH.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpNgaysinhKH.Location = new System.Drawing.Point(527, 68);
+            this.dtpNgaysinhKH.Name = "dtpNgaysinhKH";
+            this.dtpNgaysinhKH.Size = new System.Drawing.Size(233, 22);
+            this.dtpNgaysinhKH.TabIndex = 14;
             // 
             // label4
             // 
@@ -142,26 +159,11 @@
             this.txtTenKH.Size = new System.Drawing.Size(213, 30);
             this.txtTenKH.TabIndex = 1;
             // 
-            // dtpNgaysinhKH
-            // 
-            this.dtpNgaysinhKH.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpNgaysinhKH.Location = new System.Drawing.Point(527, 68);
-            this.dtpNgaysinhKH.Name = "dtpNgaysinhKH";
-            this.dtpNgaysinhKH.Size = new System.Drawing.Size(233, 22);
-            this.dtpNgaysinhKH.TabIndex = 14;
-            // 
-            // txtEmailKH
-            // 
-            this.txtEmailKH.Location = new System.Drawing.Point(527, 120);
-            this.txtEmailKH.Multiline = true;
-            this.txtEmailKH.Name = "txtEmailKH";
-            this.txtEmailKH.Size = new System.Drawing.Size(213, 30);
-            this.txtEmailKH.TabIndex = 15;
-            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Azure;
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.btTroveKH);
             this.panel2.Controls.Add(this.btThoatKH);
             this.panel2.Controls.Add(this.btLuuKH);
             this.panel2.Controls.Add(this.btSuaKH);
@@ -171,7 +173,7 @@
             this.panel2.Controls.Add(this.txtTimKH);
             this.panel2.Location = new System.Drawing.Point(579, 192);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(315, 304);
+            this.panel2.Size = new System.Drawing.Size(315, 349);
             this.panel2.TabIndex = 16;
             // 
             // btThoatKH
@@ -179,12 +181,13 @@
             this.btThoatKH.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.btThoatKH.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btThoatKH.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btThoatKH.Location = new System.Drawing.Point(103, 251);
+            this.btThoatKH.Location = new System.Drawing.Point(35, 295);
             this.btThoatKH.Name = "btThoatKH";
-            this.btThoatKH.Size = new System.Drawing.Size(103, 32);
+            this.btThoatKH.Size = new System.Drawing.Size(243, 38);
             this.btThoatKH.TabIndex = 6;
             this.btThoatKH.Text = "THOÁT";
             this.btThoatKH.UseVisualStyleBackColor = false;
+            this.btThoatKH.Click += new System.EventHandler(this.btThoatKH_Click);
             // 
             // btLuuKH
             // 
@@ -238,14 +241,6 @@
             this.btThemKH.Text = "THÊM KHÁCH HÀNG";
             this.btThemKH.UseVisualStyleBackColor = false;
             // 
-            // txtTimKH
-            // 
-            this.txtTimKH.Location = new System.Drawing.Point(13, 20);
-            this.txtTimKH.Multiline = true;
-            this.txtTimKH.Name = "txtTimKH";
-            this.txtTimKH.Size = new System.Drawing.Size(202, 34);
-            this.txtTimKH.TabIndex = 0;
-            // 
             // btTimKH
             // 
             this.btTimKH.BackColor = System.Drawing.SystemColors.ButtonHighlight;
@@ -257,19 +252,40 @@
             this.btTimKH.TabIndex = 1;
             this.btTimKH.UseVisualStyleBackColor = false;
             // 
+            // txtTimKH
+            // 
+            this.txtTimKH.Location = new System.Drawing.Point(13, 20);
+            this.txtTimKH.Multiline = true;
+            this.txtTimKH.Name = "txtTimKH";
+            this.txtTimKH.Size = new System.Drawing.Size(202, 34);
+            this.txtTimKH.TabIndex = 0;
+            // 
             // dgvKH
             // 
             this.dgvKH.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvKH.Location = new System.Drawing.Point(13, 192);
             this.dgvKH.Name = "dgvKH";
-            this.dgvKH.Size = new System.Drawing.Size(560, 304);
+            this.dgvKH.Size = new System.Drawing.Size(560, 346);
             this.dgvKH.TabIndex = 17;
+            // 
+            // btTroveKH
+            // 
+            this.btTroveKH.BackColor = System.Drawing.Color.Violet;
+            this.btTroveKH.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btTroveKH.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btTroveKH.Location = new System.Drawing.Point(35, 251);
+            this.btTroveKH.Name = "btTroveKH";
+            this.btTroveKH.Size = new System.Drawing.Size(243, 38);
+            this.btTroveKH.TabIndex = 7;
+            this.btTroveKH.Text = "TRỞ VỀ";
+            this.btTroveKH.UseVisualStyleBackColor = false;
+            this.btTroveKH.Click += new System.EventHandler(this.btTroveKH_Click);
             // 
             // Khachhang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(906, 508);
+            this.ClientSize = new System.Drawing.Size(906, 550);
             this.Controls.Add(this.dgvKH);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
@@ -305,5 +321,6 @@
         private System.Windows.Forms.Button btTimKH;
         private System.Windows.Forms.TextBox txtTimKH;
         private System.Windows.Forms.DataGridView dgvKH;
+        private System.Windows.Forms.Button btTroveKH;
     }
 }

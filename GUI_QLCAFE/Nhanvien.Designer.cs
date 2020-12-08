@@ -42,6 +42,7 @@
             this.txtSdtNV = new System.Windows.Forms.TextBox();
             this.txtTenNV = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btTroveNV = new System.Windows.Forms.Button();
             this.btThoatNV = new System.Windows.Forms.Button();
             this.btLuuNV = new System.Windows.Forms.Button();
             this.btSuaNV = new System.Windows.Forms.Button();
@@ -203,6 +204,7 @@
             // 
             this.panel2.BackColor = System.Drawing.Color.Azure;
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.btTroveNV);
             this.panel2.Controls.Add(this.btThoatNV);
             this.panel2.Controls.Add(this.btLuuNV);
             this.panel2.Controls.Add(this.btSuaNV);
@@ -212,17 +214,30 @@
             this.panel2.Controls.Add(this.txtTimNV);
             this.panel2.Location = new System.Drawing.Point(579, 225);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(315, 304);
+            this.panel2.Size = new System.Drawing.Size(315, 349);
             this.panel2.TabIndex = 1;
+            // 
+            // btTroveNV
+            // 
+            this.btTroveNV.BackColor = System.Drawing.Color.Violet;
+            this.btTroveNV.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btTroveNV.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btTroveNV.Location = new System.Drawing.Point(35, 251);
+            this.btTroveNV.Name = "btTroveNV";
+            this.btTroveNV.Size = new System.Drawing.Size(243, 38);
+            this.btTroveNV.TabIndex = 7;
+            this.btTroveNV.Text = "TRỞ VỀ";
+            this.btTroveNV.UseVisualStyleBackColor = false;
+            this.btTroveNV.Click += new System.EventHandler(this.btTroveNV_Click);
             // 
             // btThoatNV
             // 
             this.btThoatNV.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.btThoatNV.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btThoatNV.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btThoatNV.Location = new System.Drawing.Point(103, 251);
+            this.btThoatNV.Location = new System.Drawing.Point(35, 295);
             this.btThoatNV.Name = "btThoatNV";
-            this.btThoatNV.Size = new System.Drawing.Size(103, 32);
+            this.btThoatNV.Size = new System.Drawing.Size(243, 38);
             this.btThoatNV.TabIndex = 6;
             this.btThoatNV.Text = "THOÁT";
             this.btThoatNV.UseVisualStyleBackColor = false;
@@ -308,7 +323,7 @@
             this.dgvNV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvNV.Location = new System.Drawing.Point(13, 225);
             this.dgvNV.Name = "dgvNV";
-            this.dgvNV.Size = new System.Drawing.Size(560, 304);
+            this.dgvNV.Size = new System.Drawing.Size(560, 349);
             this.dgvNV.TabIndex = 2;
             this.dgvNV.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvNV_CellContentClick);
             // 
@@ -316,7 +331,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(906, 541);
+            this.ClientSize = new System.Drawing.Size(906, 586);
             this.Controls.Add(this.dgvNV);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
@@ -357,5 +372,6 @@
         private System.Windows.Forms.Button btXoaNV;
         private System.Windows.Forms.TextBox txtEmailNV;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Button btTroveNV;
     }
 }

@@ -63,5 +63,14 @@ namespace GUI_QLCAFE
         {
 
         }
+
+        private void btTroveBH_Click(object sender, EventArgs e)
+        {
+            Visible = false;
+            ShowInTaskbar = false;
+            Main main = new Main();
+            main.Activate();
+            main.Show();
+        }
     }
 }

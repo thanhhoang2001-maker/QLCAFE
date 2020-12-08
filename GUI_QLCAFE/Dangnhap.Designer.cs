@@ -83,6 +83,7 @@
             this.lbQuenmk.Size = new System.Drawing.Size(94, 13);
             this.lbQuenmk.TabIndex = 6;
             this.lbQuenmk.Text = "Quên mật khẩu ?";
+            this.lbQuenmk.Click += new System.EventHandler(this.lbQuenmk_Click);
             // 
             // label2
             // 
@@ -115,6 +116,7 @@
             this.btThoatDN.TabIndex = 3;
             this.btThoatDN.Text = "THOÁT";
             this.btThoatDN.UseVisualStyleBackColor = false;
+            this.btThoatDN.Click += new System.EventHandler(this.btThoatDN_Click);
             // 
             // btDangnhap
             // 
@@ -129,6 +131,7 @@
             this.btDangnhap.Text = "ĐĂNG NHẬP";
             this.btDangnhap.UseVisualStyleBackColor = false;
             this.btDangnhap.Click += new System.EventHandler(this.btDangnhap_Click);
+            this.btDangnhap.Enter += new System.EventHandler(this.btDangnhap_Enter);
             // 
             // label3
             // 
@@ -144,6 +147,7 @@
             // 
             // FormDangnhap
             // 
+            this.AcceptButton = this.btDangnhap;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::GUI_QLCAFE.Properties.Resources.image0__1_;

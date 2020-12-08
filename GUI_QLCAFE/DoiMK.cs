@@ -57,6 +57,19 @@ namespace GUI_QLCAFE
 
             }
         }
-        
+
+        private void btThoatDoiMK_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Visible = false;
+            ShowInTaskbar = false;
+            Main main = new Main();
+            main.Activate();
+            main.Show();
+        }
     }
 }

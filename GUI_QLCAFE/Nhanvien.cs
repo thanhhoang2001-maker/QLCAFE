@@ -214,11 +214,19 @@ namespace GUI_QLCAFE
                 }
             }
         }
-
+        private void btTroveNV_Click(object sender, EventArgs e)
+        {
+            Visible = false;
+            ShowInTaskbar = false;
+            Main main = new Main();
+            main.Activate();
+            main.Show();
+        }
         private void btThoatNV_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
+        
 
         private void dgvNV_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -250,6 +258,6 @@ namespace GUI_QLCAFE
             //}
         }
 
-
+       
     }
 }

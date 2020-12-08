@@ -39,6 +39,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -90,26 +91,26 @@
             this.btThuchien.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btThuchien.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btThuchien.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btThuchien.Location = new System.Drawing.Point(77, 341);
+            this.btThuchien.Location = new System.Drawing.Point(64, 341);
             this.btThuchien.Name = "btThuchien";
-            this.btThuchien.Size = new System.Drawing.Size(211, 46);
+            this.btThuchien.Size = new System.Drawing.Size(238, 46);
             this.btThuchien.TabIndex = 5;
             this.btThuchien.Text = "THỰC HIỆN";
             this.btThuchien.UseVisualStyleBackColor = false;
-
             // 
             // btThoatDoiMK
             // 
             this.btThoatDoiMK.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.btThoatDoiMK.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btThoatDoiMK.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btThoatDoiMK.Location = new System.Drawing.Point(115, 393);
+            this.btThoatDoiMK.Location = new System.Drawing.Point(106, 393);
             this.btThoatDoiMK.Name = "btThoatDoiMK";
-            this.btThoatDoiMK.Size = new System.Drawing.Size(130, 39);
+            this.btThoatDoiMK.Size = new System.Drawing.Size(151, 39);
             this.btThoatDoiMK.TabIndex = 6;
             this.btThoatDoiMK.Text = "THOÁT";
             this.btThoatDoiMK.UseVisualStyleBackColor = false;
-
+            this.btThoatDoiMK.Click += new System.EventHandler(this.btThoatDoiMK_Click_1);
+            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -154,12 +155,26 @@
             this.label5.TabIndex = 10;
             this.label5.Text = "Xác nhận mật khẩu";
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.SystemColors.HighlightText;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Image = global::GUI_QLCAFE.Properties.Resources.back_icon;
+            this.button1.Location = new System.Drawing.Point(3, 3);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(37, 28);
+            this.button1.TabIndex = 11;
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // DoiMK
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.ClientSize = new System.Drawing.Size(371, 453);
+            this.ClientSize = new System.Drawing.Size(371, 502);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -191,5 +206,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Button button1;
     }
 }

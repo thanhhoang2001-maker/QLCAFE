@@ -146,5 +146,14 @@ namespace GUI_QLCAFE
         {
             busSanPham.SearchSanPham(txtTimSP.Text);
         }
+
+        private void btTroveSP_Click(object sender, EventArgs e)
+        {
+            Visible = false;
+            ShowInTaskbar = false;
+            Main main = new Main();
+            main.Activate();
+            main.Show();
+        }
     }
 }
