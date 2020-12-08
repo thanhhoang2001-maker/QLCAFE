@@ -89,6 +89,7 @@ namespace GUI_QLCAFE
             hang.SOLUONGCON = int.Parse(txtSoluongSP.Text);
             hang.MOTA = txtMotaSP.Text;
             hang.HINHANH = duongdanImage;
+            hang.EMAIL = strEmail;
             File.Copy(fileAddress, fileSavePath, true);
             MessageBox.Show("Đã cập nhật sản phẩm!");
             if (txtTenSP.Text == "" || txtSoluongSP.Text == "" || txtGiabanSP.Text == "" || txtMotaSP.Text == "" || duongdanImage == "")
