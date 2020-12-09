@@ -16,7 +16,7 @@ namespace GUI_QLCAFE
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Main());
+            Application.Run(new FormDangnhap());
         }
     }
 }

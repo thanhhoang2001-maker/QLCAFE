@@ -12,10 +12,19 @@ namespace GUI_QLCAFE
 {
     public partial class Main : Form
     {
+        public static int profile = 0;
+        public static int session = 0;
+        public static string main;
         public Main()
         {
             InitializeComponent();
         }
+
+        public Main(string dnmail)
+        {
+            main = dnmail;
+        }
+
         public static string mail;
         public static int chucvu;
         private void btNhanvien_Click_1(object sender, EventArgs e)

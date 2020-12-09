@@ -331,7 +331,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(906, 586);
+            this.ClientSize = new System.Drawing.Size(905, 581);
             this.Controls.Add(this.dgvNV);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
