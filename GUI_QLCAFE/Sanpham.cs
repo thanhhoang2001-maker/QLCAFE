@@ -89,6 +89,7 @@ namespace GUI_QLCAFE
             hang.SOLUONGCON = int.Parse(txtSoluongSP.Text);
             hang.MOTA = txtMotaSP.Text;
             hang.HINHANH = duongdanImage;
+            hang.EMAIL = strEmail;
             File.Copy(fileAddress, fileSavePath, true);
             MessageBox.Show("Đã cập nhật sản phẩm!");
             if (txtTenSP.Text == "" || txtSoluongSP.Text == "" || txtGiabanSP.Text == "" || txtMotaSP.Text == "" || duongdanImage == "")
@@ -145,6 +146,15 @@ namespace GUI_QLCAFE
         private void btTimSP_Click(object sender, EventArgs e)
         {
             busSanPham.SearchSanPham(txtTimSP.Text);
+        }
+
+        private void btTroveSP_Click(object sender, EventArgs e)
+        {
+            Visible = false;
+            ShowInTaskbar = false;
+            Main main = new Main();
+            main.Activate();
+            main.Show();
         }
     }
 }

@@ -39,6 +39,7 @@
             this.txtSdtKH = new System.Windows.Forms.TextBox();
             this.txtTenKH = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btTroveKH = new System.Windows.Forms.Button();
             this.btThoatKH = new System.Windows.Forms.Button();
             this.btLuuKH = new System.Windows.Forms.Button();
             this.btSuaKH = new System.Windows.Forms.Button();
@@ -162,6 +163,7 @@
             // 
             this.panel2.BackColor = System.Drawing.Color.Azure;
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.btTroveKH);
             this.panel2.Controls.Add(this.btThoatKH);
             this.panel2.Controls.Add(this.btLuuKH);
             this.panel2.Controls.Add(this.btSuaKH);
@@ -171,17 +173,30 @@
             this.panel2.Controls.Add(this.txtTimKH);
             this.panel2.Location = new System.Drawing.Point(579, 192);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(315, 304);
+            this.panel2.Size = new System.Drawing.Size(315, 349);
             this.panel2.TabIndex = 16;
+            // 
+            // btTroveKH
+            // 
+            this.btTroveKH.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btTroveKH.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btTroveKH.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btTroveKH.Location = new System.Drawing.Point(35, 251);
+            this.btTroveKH.Name = "btTroveKH";
+            this.btTroveKH.Size = new System.Drawing.Size(243, 38);
+            this.btTroveKH.TabIndex = 7;
+            this.btTroveKH.Text = "TRỞ VỀ";
+            this.btTroveKH.UseVisualStyleBackColor = false;
+            this.btTroveKH.Click += new System.EventHandler(this.btTroveKH_Click);
             // 
             // btThoatKH
             // 
-            this.btThoatKH.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btThoatKH.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.btThoatKH.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btThoatKH.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btThoatKH.Location = new System.Drawing.Point(103, 251);
+            this.btThoatKH.Location = new System.Drawing.Point(35, 295);
             this.btThoatKH.Name = "btThoatKH";
-            this.btThoatKH.Size = new System.Drawing.Size(103, 32);
+            this.btThoatKH.Size = new System.Drawing.Size(243, 38);
             this.btThoatKH.TabIndex = 6;
             this.btThoatKH.Text = "THOÁT";
             this.btThoatKH.UseVisualStyleBackColor = false;
@@ -190,7 +205,7 @@
             // btLuuKH
             // 
             this.btLuuKH.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btLuuKH.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.btLuuKH.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.btLuuKH.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btLuuKH.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btLuuKH.Location = new System.Drawing.Point(35, 207);
@@ -199,12 +214,11 @@
             this.btLuuKH.TabIndex = 5;
             this.btLuuKH.Text = "LƯU KHÁCH HÀNG";
             this.btLuuKH.UseVisualStyleBackColor = false;
-            this.btLuuKH.Click += new System.EventHandler(this.btLuuKH_Click);
             // 
             // btSuaKH
             // 
             this.btSuaKH.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btSuaKH.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.btSuaKH.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.btSuaKH.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btSuaKH.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btSuaKH.Location = new System.Drawing.Point(35, 163);
@@ -213,12 +227,11 @@
             this.btSuaKH.TabIndex = 4;
             this.btSuaKH.Text = "CHỈNH SỬA KHÁCH HÀNG";
             this.btSuaKH.UseVisualStyleBackColor = false;
-            this.btSuaKH.Click += new System.EventHandler(this.btSuaKH_Click);
             // 
             // btXoaKH
             // 
             this.btXoaKH.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btXoaKH.BackColor = System.Drawing.Color.Tomato;
+            this.btXoaKH.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.btXoaKH.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btXoaKH.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btXoaKH.Location = new System.Drawing.Point(35, 119);
@@ -227,12 +240,11 @@
             this.btXoaKH.TabIndex = 3;
             this.btXoaKH.Text = "XÓA KHÁCH HÀNG";
             this.btXoaKH.UseVisualStyleBackColor = false;
-            this.btXoaKH.Click += new System.EventHandler(this.btXoaKH_Click);
             // 
             // btThemKH
             // 
             this.btThemKH.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btThemKH.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.btThemKH.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.btThemKH.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btThemKH.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btThemKH.Location = new System.Drawing.Point(35, 75);
@@ -241,7 +253,6 @@
             this.btThemKH.TabIndex = 2;
             this.btThemKH.Text = "THÊM KHÁCH HÀNG";
             this.btThemKH.UseVisualStyleBackColor = false;
-            this.btThemKH.Click += new System.EventHandler(this.btThemKH_Click);
             // 
             // btTimKH
             // 
@@ -253,7 +264,6 @@
             this.btTimKH.Size = new System.Drawing.Size(87, 34);
             this.btTimKH.TabIndex = 1;
             this.btTimKH.UseVisualStyleBackColor = false;
-            this.btTimKH.Click += new System.EventHandler(this.btTimKH_Click);
             // 
             // txtTimKH
             // 
@@ -262,28 +272,25 @@
             this.txtTimKH.Name = "txtTimKH";
             this.txtTimKH.Size = new System.Drawing.Size(202, 34);
             this.txtTimKH.TabIndex = 0;
-            this.txtTimKH.TextChanged += new System.EventHandler(this.txtTimKH_TextChanged);
             // 
             // dgvKH
             // 
             this.dgvKH.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvKH.Location = new System.Drawing.Point(13, 192);
             this.dgvKH.Name = "dgvKH";
-            this.dgvKH.Size = new System.Drawing.Size(560, 304);
+            this.dgvKH.Size = new System.Drawing.Size(560, 346);
             this.dgvKH.TabIndex = 17;
-            this.dgvKH.Click += new System.EventHandler(this.dgvKH_Click);
             // 
             // Khachhang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(906, 508);
+            this.ClientSize = new System.Drawing.Size(906, 550);
             this.Controls.Add(this.dgvKH);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "Khachhang";
             this.Text = "Khachhang";
-            this.Load += new System.EventHandler(this.Khachhang_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
@@ -314,5 +321,6 @@
         private System.Windows.Forms.Button btTimKH;
         private System.Windows.Forms.TextBox txtTimKH;
         private System.Windows.Forms.DataGridView dgvKH;
+        private System.Windows.Forms.Button btTroveKH;
     }
 }

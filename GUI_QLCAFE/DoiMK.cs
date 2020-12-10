@@ -54,8 +54,55 @@ namespace GUI_QLCAFE
             }
             else
             {
+                if (MessageBox.Show("Bạn có chắc muốn cập nhật mật khẩu", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    string matkhaumoi = busNhanVien.encryption(txtMKmoi.Text);
+                    string matkhaucu = busNhanVien.encryption(txtMKcu.Text);
+                    if (busNhanVien.UpdateMatKhau(txtEmailDMK.Text, matkhaucu, matkhaumoi))
+                    {
 
+                        Main.profile = 1;
+                        Main.session = 0;
+                        MessageBox.Show("Cập nhật mật khẩu thành công, bạn cần phải đăng nhập lại");
+                        //this.Close();
+
+                        Visible = false;
+                        ShowInTaskbar = false;
+
+                        Main main = new Main(txtEmailDMK.Text);
+
+                        main.Activate();
+                        main.Show();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Mật khẩu cũ không đúng");
+                        txtMKcu.Text = null;
+                        txtMKmoi.Text = null;
+                        txtXNMK.Text = null;
+                    }
+                }
+                else
+                {
+                    txtMKcu.Text = null;
+                    txtMKmoi.Text = null;
+                    txtXNMK.Text = null;
+                }
             }
+        }
+
+        private void btThoatDoiMK_Click_1(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Visible = false;
+            ShowInTaskbar = false;
+            Main main = new Main();
+            main.Activate();
+            main.Show();
         }
     }
 }

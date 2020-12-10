@@ -12,7 +12,6 @@ namespace DTO_QLCAFE
         private string emailkh;
         private string tenkh;
         private DateTime ngaysinh;
-        private int manv;
 
         public string SDTKH
         {

@@ -6,4 +6,8 @@ using System.Threading.Tasks;
 
 namespace DAL_QLCAFE
 {
+    public class DAL_HOADON
+    {
+
+    }
 }

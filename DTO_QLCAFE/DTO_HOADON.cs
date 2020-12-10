@@ -46,6 +46,17 @@ namespace DTO_QLCAFE
                 tonggiatien = value;
             }
         }
+        public int MANV
+        {
+            get
+            {
+                return manv;
+            }
+            set
+            {
+                manv = value;
+            }
+        }
         
         public DTO_HOADON(int MaHoaDon, DateTime ThoiGian, float TongGiaTien)
         {

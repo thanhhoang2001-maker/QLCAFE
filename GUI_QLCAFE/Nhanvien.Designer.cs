@@ -42,6 +42,7 @@
             this.txtSdtNV = new System.Windows.Forms.TextBox();
             this.txtTenNV = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btTroveNV = new System.Windows.Forms.Button();
             this.btThoatNV = new System.Windows.Forms.Button();
             this.btLuuNV = new System.Windows.Forms.Button();
             this.btSuaNV = new System.Windows.Forms.Button();
@@ -79,7 +80,7 @@
             // 
             // txtEmailNV
             // 
-            this.txtEmailNV.Location = new System.Drawing.Point(176, 146);
+            this.txtEmailNV.Location = new System.Drawing.Point(176, 163);
             this.txtEmailNV.Multiline = true;
             this.txtEmailNV.Name = "txtEmailNV";
             this.txtEmailNV.Size = new System.Drawing.Size(213, 30);
@@ -90,7 +91,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label6.Location = new System.Drawing.Point(67, 146);
+            this.label6.Location = new System.Drawing.Point(82, 163);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(50, 17);
             this.label6.TabIndex = 14;
@@ -136,7 +137,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label3.Location = new System.Drawing.Point(432, 120);
+            this.label3.Location = new System.Drawing.Point(470, 116);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(65, 17);
             this.label3.TabIndex = 10;
@@ -147,7 +148,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label2.Location = new System.Drawing.Point(432, 68);
+            this.label2.Location = new System.Drawing.Point(470, 68);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(56, 17);
             this.label2.TabIndex = 9;
@@ -158,7 +159,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label5.Location = new System.Drawing.Point(67, 107);
+            this.label5.Location = new System.Drawing.Point(67, 118);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(103, 17);
             this.label5.TabIndex = 8;
@@ -177,15 +178,15 @@
             // 
             // txtDiachiNV
             // 
-            this.txtDiachiNV.Location = new System.Drawing.Point(514, 68);
+            this.txtDiachiNV.Location = new System.Drawing.Point(547, 68);
             this.txtDiachiNV.Multiline = true;
             this.txtDiachiNV.Name = "txtDiachiNV";
-            this.txtDiachiNV.Size = new System.Drawing.Size(268, 30);
+            this.txtDiachiNV.Size = new System.Drawing.Size(213, 30);
             this.txtDiachiNV.TabIndex = 3;
             // 
             // txtSdtNV
             // 
-            this.txtSdtNV.Location = new System.Drawing.Point(176, 107);
+            this.txtSdtNV.Location = new System.Drawing.Point(176, 116);
             this.txtSdtNV.Multiline = true;
             this.txtSdtNV.Name = "txtSdtNV";
             this.txtSdtNV.Size = new System.Drawing.Size(213, 30);
@@ -203,6 +204,7 @@
             // 
             this.panel2.BackColor = System.Drawing.Color.Azure;
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.btTroveNV);
             this.panel2.Controls.Add(this.btThoatNV);
             this.panel2.Controls.Add(this.btLuuNV);
             this.panel2.Controls.Add(this.btSuaNV);
@@ -212,17 +214,30 @@
             this.panel2.Controls.Add(this.txtTimNV);
             this.panel2.Location = new System.Drawing.Point(579, 225);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(315, 304);
+            this.panel2.Size = new System.Drawing.Size(315, 349);
             this.panel2.TabIndex = 1;
+            // 
+            // btTroveNV
+            // 
+            this.btTroveNV.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btTroveNV.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btTroveNV.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btTroveNV.Location = new System.Drawing.Point(35, 251);
+            this.btTroveNV.Name = "btTroveNV";
+            this.btTroveNV.Size = new System.Drawing.Size(243, 38);
+            this.btTroveNV.TabIndex = 7;
+            this.btTroveNV.Text = "TRỞ VỀ";
+            this.btTroveNV.UseVisualStyleBackColor = false;
+            this.btTroveNV.Click += new System.EventHandler(this.btTroveNV_Click);
             // 
             // btThoatNV
             // 
-            this.btThoatNV.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btThoatNV.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.btThoatNV.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btThoatNV.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btThoatNV.Location = new System.Drawing.Point(103, 251);
+            this.btThoatNV.Location = new System.Drawing.Point(35, 295);
             this.btThoatNV.Name = "btThoatNV";
-            this.btThoatNV.Size = new System.Drawing.Size(103, 32);
+            this.btThoatNV.Size = new System.Drawing.Size(243, 38);
             this.btThoatNV.TabIndex = 6;
             this.btThoatNV.Text = "THOÁT";
             this.btThoatNV.UseVisualStyleBackColor = false;
@@ -231,7 +246,7 @@
             // btLuuNV
             // 
             this.btLuuNV.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btLuuNV.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.btLuuNV.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.btLuuNV.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btLuuNV.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btLuuNV.Location = new System.Drawing.Point(35, 207);
@@ -245,7 +260,7 @@
             // btSuaNV
             // 
             this.btSuaNV.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btSuaNV.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.btSuaNV.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.btSuaNV.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btSuaNV.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btSuaNV.Location = new System.Drawing.Point(35, 163);
@@ -259,7 +274,7 @@
             // btXoaNV
             // 
             this.btXoaNV.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btXoaNV.BackColor = System.Drawing.Color.Tomato;
+            this.btXoaNV.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.btXoaNV.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btXoaNV.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btXoaNV.Location = new System.Drawing.Point(35, 119);
@@ -273,7 +288,7 @@
             // btThemNV
             // 
             this.btThemNV.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btThemNV.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.btThemNV.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.btThemNV.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btThemNV.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btThemNV.Location = new System.Drawing.Point(35, 75);
@@ -308,7 +323,7 @@
             this.dgvNV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvNV.Location = new System.Drawing.Point(13, 225);
             this.dgvNV.Name = "dgvNV";
-            this.dgvNV.Size = new System.Drawing.Size(560, 304);
+            this.dgvNV.Size = new System.Drawing.Size(560, 349);
             this.dgvNV.TabIndex = 2;
             this.dgvNV.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvNV_CellContentClick);
             // 
@@ -316,7 +331,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(906, 541);
+            this.ClientSize = new System.Drawing.Size(905, 581);
             this.Controls.Add(this.dgvNV);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
@@ -357,5 +372,6 @@
         private System.Windows.Forms.Button btXoaNV;
         private System.Windows.Forms.TextBox txtEmailNV;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Button btTroveNV;
     }
 }

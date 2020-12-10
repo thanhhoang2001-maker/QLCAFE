@@ -16,5 +16,14 @@ namespace GUI_QLCAFE
         {
             InitializeComponent();
         }
+
+        private void btTroveTK_Click(object sender, EventArgs e)
+        {
+            Visible = false;
+            ShowInTaskbar = false;
+            Main main = new Main();
+            main.Activate();
+            main.Show();
+        }
     }
 }
