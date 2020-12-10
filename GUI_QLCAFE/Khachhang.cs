@@ -22,17 +22,18 @@ namespace GUI_QLCAFE
         private void LoadGirdview_Khach()
         {
             dgvKH.DataSource = busKhach.GetKhach();
-            dgvKH.Columns[0].HeaderText = "Họ và Tên";
-            dgvKH.Columns[1].HeaderText = "Điện thoại";
-            dgvKH.Columns[2].HeaderText = "Ngày sinh";
-            dgvKH.Columns[3].HeaderText = "Email";
+            dgvKH.Columns[0].HeaderText = "Điện thoại" ;
+            dgvKH.Columns[1].HeaderText = "Họ và Tên";
+            dgvKH.Columns[2].HeaderText = "Email" ;
+            dgvKH.Columns[3].HeaderText = "Ngày sinh";
+            
         }
         public void ResetValues()
         {
             txtTimKH.Text = "Nhập số điện thoại khách hàng";
 
-            txtTenKH.Text = null;
             txtSdtKH.Text = null;
+            txtTenKH.Text = null; 
             txtEmailKH.Text = null;
             dtpNgaysinhKH.Text = null;
 
@@ -49,13 +50,13 @@ namespace GUI_QLCAFE
         }
         private void btThemKH_Click(object sender, EventArgs e)
         {
-            txtTenKH.Text = null;
             txtSdtKH.Text = null;
+            txtTenKH.Text = null;
             txtEmailKH.Text = null;
             dtpNgaysinhKH.Text = null;
 
-            txtTenKH.Enabled = true;
             txtSdtKH.Enabled = true;
+            txtTenKH.Enabled = true;
             txtEmailKH.Enabled = true;
             dtpNgaysinhKH.Enabled = true;
 
@@ -101,7 +102,7 @@ namespace GUI_QLCAFE
             }
             else
             {
-                DTO_KHACHHANG kh = new DTO_KHACHHANG(txtTenKH.Text, txtSdtKH.Text, txtEmailKH.Text, dtpNgaysinhKH.Value.Date);
+                DTO_KHACHHANG kh = new DTO_KHACHHANG(txtSdtKH.Text, txtTenKH.Text, txtEmailKH.Text, dtpNgaysinhKH.Value.Date);
                 if (MessageBox.Show("Bạn có chắc muốn chỉnh sửa", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
                     if (busKhach.UpdateKhach(kh))
@@ -167,19 +168,19 @@ namespace GUI_QLCAFE
             
             if (dgvKH.Rows.Count > 1)
             {
-                btLuuKH.Enabled = false;
+                btLuuKH.Enabled = true;
+                txtSdtKH.Enabled = true;
                 txtTenKH.Enabled = true;
                 txtEmailKH.Enabled = true;
-                txtSdtKH.Enabled = true;
-
+                
                 btXoaKH.Enabled = true;
                 btSuaKH.Enabled = true;
 
-                txtTenKH.Text = dgvKH.CurrentRow.Cells[0].Value.ToString();
-                txtSdtKH.Text = dgvKH.CurrentRow.Cells[1].Value.ToString();
+                txtSdtKH.Text = dgvKH.CurrentRow.Cells[0].Value.ToString();
+                txtTenKH.Text = dgvKH.CurrentRow.Cells[1].Value.ToString();
                 txtEmailKH.Text = dgvKH.CurrentRow.Cells[2].Value.ToString();
+                dtpNgaysinhKH.Text = dgvKH.CurrentRow.Cells[3].Value.ToString();
 
-                string phai = dgvKH.CurrentRow.Cells[3].Value.ToString();
             }
             else
             {
@@ -199,7 +200,7 @@ namespace GUI_QLCAFE
             }
             else
             {
-                DTO_KHACHHANG kh = new DTO_KHACHHANG(txtTenKH.Text, txtSdtKH.Text, txtEmailKH.Text, dtpNgaysinhKH.Value.Date);
+                DTO_KHACHHANG kh = new DTO_KHACHHANG(txtSdtKH.Text, txtTenKH.Text, txtEmailKH.Text, dtpNgaysinhKH.Value.Date);
                 if (busKhach.InsertKhach(kh))
                 {
                     MessageBox.Show("Thêm thành công");

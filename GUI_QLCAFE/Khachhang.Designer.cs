@@ -73,7 +73,7 @@
             // 
             // txtEmailKH
             // 
-            this.txtEmailKH.Location = new System.Drawing.Point(527, 120);
+            this.txtEmailKH.Location = new System.Drawing.Point(538, 68);
             this.txtEmailKH.Multiline = true;
             this.txtEmailKH.Name = "txtEmailKH";
             this.txtEmailKH.Size = new System.Drawing.Size(213, 30);
@@ -82,7 +82,7 @@
             // dtpNgaysinhKH
             // 
             this.dtpNgaysinhKH.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpNgaysinhKH.Location = new System.Drawing.Point(527, 68);
+            this.dtpNgaysinhKH.Location = new System.Drawing.Point(538, 132);
             this.dtpNgaysinhKH.Name = "dtpNgaysinhKH";
             this.dtpNgaysinhKH.Size = new System.Drawing.Size(233, 22);
             this.dtpNgaysinhKH.TabIndex = 14;
@@ -103,7 +103,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label3.Location = new System.Drawing.Point(432, 120);
+            this.label3.Location = new System.Drawing.Point(446, 68);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(46, 17);
             this.label3.TabIndex = 10;
@@ -114,7 +114,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label2.Location = new System.Drawing.Point(432, 68);
+            this.label2.Location = new System.Drawing.Point(432, 137);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(78, 17);
             this.label2.TabIndex = 9;
@@ -125,7 +125,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label5.Location = new System.Drawing.Point(67, 120);
+            this.label5.Location = new System.Drawing.Point(55, 68);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(103, 17);
             this.label5.TabIndex = 8;
@@ -136,7 +136,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label1.Location = new System.Drawing.Point(67, 68);
+            this.label1.Location = new System.Drawing.Point(67, 120);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(76, 17);
             this.label1.TabIndex = 4;
@@ -144,7 +144,7 @@
             // 
             // txtSdtKH
             // 
-            this.txtSdtKH.Location = new System.Drawing.Point(176, 119);
+            this.txtSdtKH.Location = new System.Drawing.Point(176, 68);
             this.txtSdtKH.Multiline = true;
             this.txtSdtKH.Name = "txtSdtKH";
             this.txtSdtKH.Size = new System.Drawing.Size(213, 30);
@@ -152,7 +152,7 @@
             // 
             // txtTenKH
             // 
-            this.txtTenKH.Location = new System.Drawing.Point(176, 68);
+            this.txtTenKH.Location = new System.Drawing.Point(176, 120);
             this.txtTenKH.Multiline = true;
             this.txtTenKH.Name = "txtTenKH";
             this.txtTenKH.Size = new System.Drawing.Size(213, 30);

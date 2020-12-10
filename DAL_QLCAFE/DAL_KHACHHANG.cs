@@ -38,10 +38,11 @@ namespace DAL_QLCAFE
                 cmd.Connection = _conn;
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.CommandText = "[InsertDataIntoTblKhach]";
-                cmd.Parameters.AddWithValue("DienThoai", khach.SDTKH);
-                cmd.Parameters.AddWithValue("TenKhach", khach.TENKH);
-                cmd.Parameters.AddWithValue("NgaySinh", khach.NGAYSINH);
-                cmd.Parameters.AddWithValue("Email", khach.EMAILKH);
+                cmd.Parameters.AddWithValue("dienThoai", khach.SDTKH);
+                cmd.Parameters.AddWithValue("tenKhach", khach.TENKH);
+                cmd.Parameters.AddWithValue("email", khach.EMAILKH);
+                cmd.Parameters.AddWithValue("ngaysinh", khach.NGAYSINH);
+                
 
                 if (cmd.ExecuteNonQuery() > 0)
                     return true;
@@ -65,7 +66,7 @@ namespace DAL_QLCAFE
                 cmd.Connection = _conn;
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.CommandText = "[DeleteDataFromtblKhach]";
-                cmd.Parameters.AddWithValue("sodienthoai", sodienthoai);
+                cmd.Parameters.AddWithValue("dienthoai", sodienthoai);
 
                 if (cmd.ExecuteNonQuery() > 0)
                     return true;
@@ -89,9 +90,10 @@ namespace DAL_QLCAFE
                 cmd.Connection = _conn;
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.CommandText = "[UpdateDataIntoTblKhach]";
-                cmd.Parameters.AddWithValue("SoDienThoai", khach.SDTKH);
-                cmd.Parameters.AddWithValue("TenKhach", khach.TENKH);
-                cmd.Parameters.AddWithValue("NgaySinh", khach.NGAYSINH);
+                cmd.Parameters.AddWithValue("sodienthoai", khach.SDTKH);
+                cmd.Parameters.AddWithValue("tenKhach", khach.TENKH);
+                cmd.Parameters.AddWithValue("email", khach.EMAILKH);
+                cmd.Parameters.AddWithValue("ngaysinh", khach.NGAYSINH);
 
 
 
@@ -116,7 +118,7 @@ namespace DAL_QLCAFE
                 SqlCommand cmd = new SqlCommand();
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.CommandText = "[SearchKhach]";
-                cmd.Parameters.AddWithValue("SoDienThoai", sodienthoai);
+                cmd.Parameters.AddWithValue("dienthoai", sodienthoai);
                 cmd.Connection = _conn;
                 DataTable dtkhach = new DataTable();
                 dtkhach.Load(cmd.ExecuteReader());

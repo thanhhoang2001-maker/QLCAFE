@@ -80,8 +80,7 @@ namespace GUI_QLCAFE
             dangnhap.Activate();
             dangnhap.Show();
         }
-
-        private void btThoatMain_Click(object sender, EventArgs e)
+        private void btThoatMain_Click_1(object sender, EventArgs e)
         {
             Close();
         }

@@ -122,19 +122,32 @@ namespace GUI_QLCAFE
                 txtTenNV.Focus();
                 return;
             }
+            else if (txtSdtNV.Text.Trim().Length == 0)
+            {
+                MessageBox.Show("Bạn phải nhập số điện thoại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                txtDiachiNV.Focus();
+                return;
+            }
+            if (txtEmailNV.Text.Trim().Length == 0)
+            {
+                MessageBox.Show("Bạn phải nhập Mail đầy đủ", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                txtTenNV.Focus();
+                return;
+            }
             else if (txtDiachiNV.Text.Trim().Length == 0)
             {
                 MessageBox.Show("Bạn phải nhập địa chỉ", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 txtDiachiNV.Focus();
                 return;
             }
+
             else
             {
                 int role = 0;
                 if (rbRoleQL.Checked)
                     role = 1;
 
-                DTO_NHANVIEN nv = new DTO_NHANVIEN(txtTenNV.Text, txtEmailNV.Text, txtSdtNV.Text, txtDiachiNV.Text, role);
+                DTO_NHANVIEN nv = new DTO_NHANVIEN(txtTenNV.Text, txtSdtNV.Text, txtEmailNV.Text, txtDiachiNV.Text, role);
 
                 if (MessageBox.Show("Bạn có chắc muốn chỉnh sửa", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
@@ -201,7 +214,7 @@ namespace GUI_QLCAFE
             }
             else
             {
-                DTO_NHANVIEN nv = new DTO_NHANVIEN(txtTenNV.Text, txtSdtNV.Text, txtEmailNV.Text,  txtDiachiNV.Text, role);
+                DTO_NHANVIEN nv = new DTO_NHANVIEN(txtTenNV.Text, txtSdtNV.Text, txtEmailNV.Text, txtDiachiNV.Text,role);
                 if (busNhanVien.insertNhanVien(nv))
                 {
                     MessageBox.Show("Thêm thành công");
@@ -230,16 +243,19 @@ namespace GUI_QLCAFE
                 txtSdtNV.Enabled = true;
                 txtEmailNV.Enabled = true;
                 txtDiachiNV.Enabled = true;
+
                 rbRoleNV.Enabled = true;
                 rbRoleQL.Enabled = true;
+
                 btSuaNV.Enabled = true;
                 btXoaNV.Enabled = true;
 
-                txtTenNV.Text = dgvNV.CurrentRow.Cells[2].Value.ToString();
+                txtTenNV.Text = dgvNV.CurrentRow.Cells[0].Value.ToString();
                 txtSdtNV.Text = dgvNV.CurrentRow.Cells[1].Value.ToString();
-                txtEmailNV.Text = dgvNV.CurrentRow.Cells[0].Value.ToString();
-                txtDiachiNV.Text = dgvNV.CurrentRow.Cells[3].Value.ToString();
-
+                txtEmailNV.Text = dgvNV.CurrentRow.Cells[2].Value.ToString();
+                txtDiachiNV.Text = dgvNV.CurrentRow.Cells[3].Value.ToString(); 
+                
+                
                 if (int.Parse(dgvNV.CurrentRow.Cells[4].Value.ToString()) == 1)
                     rbRoleQL.Checked = true;
                 else

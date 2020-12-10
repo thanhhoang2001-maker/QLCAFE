@@ -174,7 +174,7 @@ namespace DAL_QLCAFE
                 cmd.Parameters.AddWithValue("sodienthoai", nv.SDT);
                 cmd.Parameters.AddWithValue("email", nv.EMAIL);
                 cmd.Parameters.AddWithValue("diachi", nv.DIACHI);
-                cmd.Parameters.AddWithValue("chucVu", nv.CHUCVU);
+                cmd.Parameters.AddWithValue("chucvu", nv.CHUCVU);
                 //cmd.Parameters.AddWithValue("tinhtrang", nv.TinhTrang);
 
                 if (cmd.ExecuteNonQuery() > 0)
@@ -225,11 +225,11 @@ namespace DAL_QLCAFE
                 cmd.Connection = _conn;
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.CommandText = "[UpdateDataIntoTblNhanVien]";
+                cmd.Parameters.AddWithValue("tenNv", nv.TENNV);
+                cmd.Parameters.AddWithValue("sodienthoai", nv.SDT);
                 cmd.Parameters.AddWithValue("email", nv.EMAIL);
-                cmd.Parameters.AddWithValue("tennv", nv.TENNV);
                 cmd.Parameters.AddWithValue("diachi", nv.DIACHI);
-                cmd.Parameters.AddWithValue("vaitro", nv.CHUCVU);
-                //cmd.Parameters.AddWithValue("tinhtrang", nv.TinhTrang);
+                cmd.Parameters.AddWithValue("chucvu", nv.CHUCVU);
 
                 if (cmd.ExecuteNonQuery() > 0)
                     return true;

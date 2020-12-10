@@ -59,11 +59,11 @@ namespace DTO_QLCAFE
             }
         }
 
-        public DTO_KHACHHANG(string SoDienThoai, string Email, string TenKhachHang, DateTime NgaySinh)
+        public DTO_KHACHHANG(string SoDienThoai, string TenKhachHang, string Email,  DateTime NgaySinh)
         {
             this.sdtkh = SoDienThoai;
-            this.emailkh = Email;
             this.tenkh = TenKhachHang;
+            this.emailkh = Email;
             this.ngaysinh = NgaySinh;
         }
     }

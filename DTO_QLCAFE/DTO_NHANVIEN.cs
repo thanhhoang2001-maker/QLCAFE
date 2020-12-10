@@ -109,12 +109,13 @@ namespace DTO_QLCAFE
             this.email = Email;
             this.matkhau = MatKhau;
         }
-        public DTO_NHANVIEN(string TenNhanVien,string Email, string DiaChi, string SoDienThoai, int ChucVu)
+        public DTO_NHANVIEN(string TenNhanVien, string SoDienThoai, string Email, string DiaChi, int ChucVu)
         {
             
             this.tennv = TenNhanVien;
-            this.diachi = DiaChi;
             this.sdt = SoDienThoai;
+            this.email = Email;
+            this.diachi = DiaChi;
             this.chucvu = ChucVu;
             
         }
