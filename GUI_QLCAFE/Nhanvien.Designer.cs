@@ -219,7 +219,7 @@
             // 
             // btTroveNV
             // 
-            this.btTroveNV.BackColor = System.Drawing.Color.Violet;
+            this.btTroveNV.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.btTroveNV.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btTroveNV.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btTroveNV.Location = new System.Drawing.Point(35, 251);
@@ -232,7 +232,7 @@
             // 
             // btThoatNV
             // 
-            this.btThoatNV.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btThoatNV.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.btThoatNV.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btThoatNV.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btThoatNV.Location = new System.Drawing.Point(35, 295);
@@ -246,7 +246,7 @@
             // btLuuNV
             // 
             this.btLuuNV.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btLuuNV.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.btLuuNV.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.btLuuNV.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btLuuNV.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btLuuNV.Location = new System.Drawing.Point(35, 207);
@@ -260,7 +260,7 @@
             // btSuaNV
             // 
             this.btSuaNV.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btSuaNV.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.btSuaNV.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.btSuaNV.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btSuaNV.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btSuaNV.Location = new System.Drawing.Point(35, 163);
@@ -274,7 +274,7 @@
             // btXoaNV
             // 
             this.btXoaNV.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btXoaNV.BackColor = System.Drawing.Color.Tomato;
+            this.btXoaNV.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.btXoaNV.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btXoaNV.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btXoaNV.Location = new System.Drawing.Point(35, 119);
@@ -288,7 +288,7 @@
             // btThemNV
             // 
             this.btThemNV.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btThemNV.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.btThemNV.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.btThemNV.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btThemNV.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btThemNV.Location = new System.Drawing.Point(35, 75);

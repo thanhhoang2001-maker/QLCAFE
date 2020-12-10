@@ -76,7 +76,7 @@ namespace GUI_QLCAFE
 
         private void btThoatDN_Click(object sender, EventArgs e)
         {
-
+            Application.Exit();
         }
 
         private void btDangnhap_Enter(object sender, EventArgs e)

@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btTroveBH = new System.Windows.Forms.Button();
             this.txtSoLuong = new System.Windows.Forms.TextBox();
             this.btSoluongThem = new System.Windows.Forms.Button();
             this.btThoatBH = new System.Windows.Forms.Button();
@@ -52,7 +53,6 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
             this.listViewSanPham = new System.Windows.Forms.ListView();
-            this.btTroveBH = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -79,6 +79,19 @@
             this.panel1.Size = new System.Drawing.Size(354, 535);
             this.panel1.TabIndex = 0;
             // 
+            // btTroveBH
+            // 
+            this.btTroveBH.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btTroveBH.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btTroveBH.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btTroveBH.Location = new System.Drawing.Point(47, 417);
+            this.btTroveBH.Name = "btTroveBH";
+            this.btTroveBH.Size = new System.Drawing.Size(248, 48);
+            this.btTroveBH.TabIndex = 19;
+            this.btTroveBH.Text = "TRỞ VỀ";
+            this.btTroveBH.UseVisualStyleBackColor = false;
+            this.btTroveBH.Click += new System.EventHandler(this.btTroveBH_Click);
+            // 
             // txtSoLuong
             // 
             this.txtSoLuong.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
@@ -103,7 +116,7 @@
             // 
             // btThoatBH
             // 
-            this.btThoatBH.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.btThoatBH.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.btThoatBH.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btThoatBH.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btThoatBH.Location = new System.Drawing.Point(47, 471);
@@ -127,7 +140,7 @@
             // 
             // btXoaBH
             // 
-            this.btXoaBH.BackColor = System.Drawing.Color.Tomato;
+            this.btXoaBH.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.btXoaBH.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btXoaBH.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btXoaBH.Location = new System.Drawing.Point(47, 363);
@@ -139,7 +152,7 @@
             // 
             // btThemBH
             // 
-            this.btThemBH.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.btThemBH.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.btThemBH.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btThemBH.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btThemBH.Location = new System.Drawing.Point(47, 309);
@@ -322,24 +335,11 @@
             // 
             this.listViewSanPham.HideSelection = false;
             this.listViewSanPham.Location = new System.Drawing.Point(374, 51);
-            this.listViewSanPham.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.listViewSanPham.Margin = new System.Windows.Forms.Padding(2);
             this.listViewSanPham.Name = "listViewSanPham";
             this.listViewSanPham.Size = new System.Drawing.Size(530, 345);
             this.listViewSanPham.TabIndex = 16;
             this.listViewSanPham.UseCompatibleStateImageBehavior = false;
-            // 
-            // btTroveBH
-            // 
-            this.btTroveBH.BackColor = System.Drawing.Color.Violet;
-            this.btTroveBH.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btTroveBH.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btTroveBH.Location = new System.Drawing.Point(47, 417);
-            this.btTroveBH.Name = "btTroveBH";
-            this.btTroveBH.Size = new System.Drawing.Size(248, 48);
-            this.btTroveBH.TabIndex = 19;
-            this.btTroveBH.Text = "TRỞ VỀ";
-            this.btTroveBH.UseVisualStyleBackColor = false;
-            this.btTroveBH.Click += new System.EventHandler(this.btTroveBH_Click);
             // 
             // Banhang
             // 

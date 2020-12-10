@@ -44,6 +44,7 @@
             this.txtTenSP = new System.Windows.Forms.TextBox();
             this.dgvSP = new System.Windows.Forms.DataGridView();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btTroveSP = new System.Windows.Forms.Button();
             this.btThoatSP = new System.Windows.Forms.Button();
             this.btLuuSP = new System.Windows.Forms.Button();
             this.btSuaSP = new System.Windows.Forms.Button();
@@ -51,7 +52,6 @@
             this.btThemSP = new System.Windows.Forms.Button();
             this.btTimSP = new System.Windows.Forms.Button();
             this.txtTimSP = new System.Windows.Forms.TextBox();
-            this.btTroveSP = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ptbHinhanhSP)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSP)).BeginInit();
@@ -237,9 +237,22 @@
             this.panel2.Size = new System.Drawing.Size(315, 343);
             this.panel2.TabIndex = 3;
             // 
+            // btTroveSP
+            // 
+            this.btTroveSP.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btTroveSP.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btTroveSP.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btTroveSP.Location = new System.Drawing.Point(41, 246);
+            this.btTroveSP.Name = "btTroveSP";
+            this.btTroveSP.Size = new System.Drawing.Size(243, 38);
+            this.btTroveSP.TabIndex = 8;
+            this.btTroveSP.Text = "TRỞ VỀ";
+            this.btTroveSP.UseVisualStyleBackColor = false;
+            this.btTroveSP.Click += new System.EventHandler(this.btTroveSP_Click);
+            // 
             // btThoatSP
             // 
-            this.btThoatSP.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btThoatSP.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.btThoatSP.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btThoatSP.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btThoatSP.Location = new System.Drawing.Point(41, 290);
@@ -253,7 +266,7 @@
             // btLuuSP
             // 
             this.btLuuSP.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btLuuSP.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.btLuuSP.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.btLuuSP.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btLuuSP.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btLuuSP.Location = new System.Drawing.Point(41, 202);
@@ -267,7 +280,7 @@
             // btSuaSP
             // 
             this.btSuaSP.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btSuaSP.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.btSuaSP.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.btSuaSP.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btSuaSP.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btSuaSP.Location = new System.Drawing.Point(41, 158);
@@ -281,7 +294,7 @@
             // btXoaSP
             // 
             this.btXoaSP.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btXoaSP.BackColor = System.Drawing.Color.Tomato;
+            this.btXoaSP.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.btXoaSP.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btXoaSP.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btXoaSP.Location = new System.Drawing.Point(41, 114);
@@ -295,7 +308,7 @@
             // btThemSP
             // 
             this.btThemSP.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btThemSP.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.btThemSP.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.btThemSP.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btThemSP.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btThemSP.Location = new System.Drawing.Point(41, 70);
@@ -325,19 +338,6 @@
             this.txtTimSP.Name = "txtTimSP";
             this.txtTimSP.Size = new System.Drawing.Size(202, 34);
             this.txtTimSP.TabIndex = 0;
-            // 
-            // btTroveSP
-            // 
-            this.btTroveSP.BackColor = System.Drawing.Color.Violet;
-            this.btTroveSP.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btTroveSP.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btTroveSP.Location = new System.Drawing.Point(41, 246);
-            this.btTroveSP.Name = "btTroveSP";
-            this.btTroveSP.Size = new System.Drawing.Size(243, 38);
-            this.btTroveSP.TabIndex = 8;
-            this.btTroveSP.Text = "TRỞ VỀ";
-            this.btTroveSP.UseVisualStyleBackColor = false;
-            this.btTroveSP.Click += new System.EventHandler(this.btTroveSP_Click);
             // 
             // Sanpham
             // 

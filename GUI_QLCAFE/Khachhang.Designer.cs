@@ -39,6 +39,7 @@
             this.txtSdtKH = new System.Windows.Forms.TextBox();
             this.txtTenKH = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btTroveKH = new System.Windows.Forms.Button();
             this.btThoatKH = new System.Windows.Forms.Button();
             this.btLuuKH = new System.Windows.Forms.Button();
             this.btSuaKH = new System.Windows.Forms.Button();
@@ -47,7 +48,6 @@
             this.btTimKH = new System.Windows.Forms.Button();
             this.txtTimKH = new System.Windows.Forms.TextBox();
             this.dgvKH = new System.Windows.Forms.DataGridView();
-            this.btTroveKH = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvKH)).BeginInit();
@@ -176,9 +176,22 @@
             this.panel2.Size = new System.Drawing.Size(315, 349);
             this.panel2.TabIndex = 16;
             // 
+            // btTroveKH
+            // 
+            this.btTroveKH.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btTroveKH.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btTroveKH.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btTroveKH.Location = new System.Drawing.Point(35, 251);
+            this.btTroveKH.Name = "btTroveKH";
+            this.btTroveKH.Size = new System.Drawing.Size(243, 38);
+            this.btTroveKH.TabIndex = 7;
+            this.btTroveKH.Text = "TRỞ VỀ";
+            this.btTroveKH.UseVisualStyleBackColor = false;
+            this.btTroveKH.Click += new System.EventHandler(this.btTroveKH_Click);
+            // 
             // btThoatKH
             // 
-            this.btThoatKH.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btThoatKH.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.btThoatKH.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btThoatKH.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btThoatKH.Location = new System.Drawing.Point(35, 295);
@@ -192,7 +205,7 @@
             // btLuuKH
             // 
             this.btLuuKH.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btLuuKH.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.btLuuKH.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.btLuuKH.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btLuuKH.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btLuuKH.Location = new System.Drawing.Point(35, 207);
@@ -205,7 +218,7 @@
             // btSuaKH
             // 
             this.btSuaKH.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btSuaKH.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.btSuaKH.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.btSuaKH.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btSuaKH.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btSuaKH.Location = new System.Drawing.Point(35, 163);
@@ -218,7 +231,7 @@
             // btXoaKH
             // 
             this.btXoaKH.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btXoaKH.BackColor = System.Drawing.Color.Tomato;
+            this.btXoaKH.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.btXoaKH.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btXoaKH.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btXoaKH.Location = new System.Drawing.Point(35, 119);
@@ -231,7 +244,7 @@
             // btThemKH
             // 
             this.btThemKH.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btThemKH.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.btThemKH.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.btThemKH.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btThemKH.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btThemKH.Location = new System.Drawing.Point(35, 75);
@@ -267,19 +280,6 @@
             this.dgvKH.Name = "dgvKH";
             this.dgvKH.Size = new System.Drawing.Size(560, 346);
             this.dgvKH.TabIndex = 17;
-            // 
-            // btTroveKH
-            // 
-            this.btTroveKH.BackColor = System.Drawing.Color.Violet;
-            this.btTroveKH.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btTroveKH.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btTroveKH.Location = new System.Drawing.Point(35, 251);
-            this.btTroveKH.Name = "btTroveKH";
-            this.btTroveKH.Size = new System.Drawing.Size(243, 38);
-            this.btTroveKH.TabIndex = 7;
-            this.btTroveKH.Text = "TRỞ VỀ";
-            this.btTroveKH.UseVisualStyleBackColor = false;
-            this.btTroveKH.Click += new System.EventHandler(this.btTroveKH_Click);
             // 
             // Khachhang
             // 
